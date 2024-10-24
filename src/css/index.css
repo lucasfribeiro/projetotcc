@@ -4,8 +4,8 @@
     --color-dark: #010101;
     --color-blue: #0077fa;
     --color-white: #ffffff;
-    --color-background: #e9eeff;
-    --color-border: #5d6478;
+    --color-background: #eaedf7;
+    --color-border: #a6abb9c7;
     --color-border-dark:#292d3a;
 
     --color-red:#de212e;
@@ -43,8 +43,59 @@
     border-radius: .5rem;
 }
 
+.login h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login p{
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color-background);
+}
+
+.login button{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-blue);
+    color: var(--color-white);
+    width: 100%;
+    margin-top: 15px;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.login i{
+    font-size: 20px;
+}
+
+.login h3{
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+.login a{
+    text-decoration: none;
+    color: var(--color-blue);
+}
+
 .input-area{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    gap: .5rem;
+}
+
+.input-area input{
+    border: 1px solid var(--color-border);
+    padding: .5rem;
+    font-size: 16px;
+    border-radius: .5rem;
+    outline: var(--color-blue);
 }
