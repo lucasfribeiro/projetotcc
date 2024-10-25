@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/website-logo.png"
+      type="image/x-icon"
+    />
+    <title>Faça seu cadastro Finance!</title>
+    <link rel="stylesheet" href="/src/css/cad.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cad">
+        <div class="text">
+          <h1>Bem vindo(a) ao Finance!</h1>
+          <p>
+            Sistema de controle financeiro pessoal. Preencha todos os campos
+            para fazer seu cadastro!
+          </p>
+        </div>
+        <form id="form">
+
+          <div class="username">
+            <label>Como você gostaria de ser chamado?</label>
+            <input type="text" id="apelido" placeholder="Apelido" required/>
+          </div>
+
+          <div class="cad-area">
+            <label>Nome</label>
+            <input type="text" required>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Telefone</label>
+            <input type="tel" required>
+
+            <label>Senha</label>
+            <input type="password" required>
+            <div class="message" id="message">
+              <p>Cadastro realizado com sucesso! Agora faça login.</p>
+              <i class='bx bx-check'></i>
+            </div>
+            <button id="submit" type="submit">Cadastrar</button>
+          </div>
+          <a href="/index.html" id="login">Fazer login</a>
+
+        </form>
+      </div>
+    </div>
+
+    <script src="/src/js/cad.js"></script>
+  </body>
+</html>
