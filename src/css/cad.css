@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     gap: .8rem;
+    user-select: none;
 }
 
 .text p{
@@ -106,6 +107,10 @@ form{
     font-size: 28px;
 }
 
+.message a{
+    color: var(--color-sucess);
+}
+
 button{
     padding: .5rem;
     cursor: pointer;
@@ -137,5 +142,19 @@ button{
 @media screen and (max-width: 660px){
     .cad{
         flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .text h1{
+        font-size: 28px;
+    }
+
+    .text p{
+        font-size: 16px;
+    }
+
+    .message{
+        font-size: 12px;
     }
 }

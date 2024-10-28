@@ -1,8 +1,10 @@
 const form = document.getElementById('form');
 const message = document.getElementById('message');
-const login = document.getElementById('login')
+const login = document.querySelector("#login");
 
-form.addEventListener("submit", () => {
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
     message.classList.add('show-flex')
     login.classList.add('show-block')
 })
