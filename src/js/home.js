@@ -101,7 +101,7 @@ perfilBtn.addEventListener("click", () => {
 
     homeBtn.classList.remove("active");
     receitasBtn.classList.remove("active");
-    lembrtesBtn.classList.remove("active");
+    lembretesBtn.classList.remove("active");
     desempenhoBtn.classList.remove("active");
     optionsBtn.classList.remove("active");
 
@@ -112,4 +112,42 @@ perfilBtn.addEventListener("click", () => {
     Lembretes.style.display = "none";
     Desempenho.style.display = "none";
     Options.style.display = "none";
+})
+
+desempenhoBtn.addEventListener("click", () => {
+
+    desempenhoBtn.classList.add("active");
+
+    homeBtn.classList.remove("active");
+    receitasBtn.classList.remove("active");
+    perfilBtn.classList.remove("active");
+    lembretesBtn.classList.remove("active");
+    optionsBtn.classList.remove("active");
+
+    Desempenho.style.display = "block";
+
+    Home.style.display = "none";
+    Receitas.style.display = "none";
+    Lembretes.style.display = "none";
+    Perfil.style.display = "none";
+    Options.style.display = "none";
+})
+
+optionsBtn.addEventListener("click", () => {
+
+    optionsBtn.classList.add("active");
+
+    homeBtn.classList.remove("active");
+    receitasBtn.classList.remove("active");
+    perfilBtn.classList.remove("active");
+    lembretesBtn.classList.remove("active");
+    desempenhoBtn.classList.remove("active");
+
+    Options.style.display = "block";
+
+    Home.style.display = "none";
+    Receitas.style.display = "none";
+    Lembretes.style.display = "none";
+    Perfil.style.display = "none";
+    Desempenho.style.display = "none";
 })
