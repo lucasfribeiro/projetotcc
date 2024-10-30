@@ -222,7 +222,11 @@
 
 .main{
     margin-top: 1rem;
-    width: 90%;
+    width: 100%;
+}
+
+.content{
+    width: 98%;
 }
 
 @media screen and (max-width: 660px){
@@ -257,3 +261,20 @@
 }
 
 /* Fim do Main */
+
+/* Início */
+.topo-receitas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.item{
+    background: var(--color-white);
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Fim do Início */
