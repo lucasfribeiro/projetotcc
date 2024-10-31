@@ -98,6 +98,7 @@
     border-bottom: 1px solid var(--color-border) ;
     width: 100%;
     position: fixed;
+    user-select: none;
 }
 
 .button-menu{
@@ -123,6 +124,7 @@
     width: 200px;
     height: 100dvh;
     padding: .75rem;
+    user-select: none;
     border-right: 1px solid var(--color-border);
 }
 
@@ -225,6 +227,10 @@
     width: 100%;
 }
 
+.main h1{
+    user-select: none;
+}
+
 .content{
     width: 98%;
 }
@@ -274,7 +280,40 @@
 .item{
     background: var(--color-white);
     width: 100%;
+    color: var(--color-dark);
     padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-border);
+}
+
+.item h2{
+    padding-bottom: .25rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-bottom: 1px dashed var(--color-border);
+    user-select: none;
+}
+
+.results{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.results span{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.results span::selection{
+    background: var(--color-background);
+    color: var(--color-border-dark);
+}
+
+.results i{
+    font-size: 1.8rem;
+    color: var(--color-blue);
 }
 
 /* Fim do Início */
