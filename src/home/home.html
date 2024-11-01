@@ -1,141 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/home.css">
-    <link rel="shortcut icon" href="/assets/images/website-logo.png" type="image/x-icon">
-    <title>Finance | Controle financeiro</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-  </head>
-  <body>
-    <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/css/home.css">
+  <link rel="shortcut icon" href="/assets/images/website-logo.png" type="image/x-icon">
+  <title>Finance | Controle financeiro</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-      <div class="modal-sucess" id="modal_sucess">
-        <div class="modal-content" >
-          <h2>Sucesso!</h2>
-          <p>Tudo pronto! Clique no botão para <span style="color: #0b9c42; font-weight: 700;">prosseguir</span>.</p>
-          <button id="close_sucess">Prosseguir</button>
-        </div>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="modal-sucess" id="modal_sucess">
+      <div class="modal-content">
+        <h2>Sucesso!</h2>
+        <p>Tudo pronto! Clique no botão para <span style="color: #0b9c42; font-weight: 700;">prosseguir</span>.</p>
+        <button id="close_sucess">Prosseguir</button>
       </div>
-
-      <div class="navbar">
-        <div class="button-menu">
-          <button id="menu_btn">
-            <i class='bx bx-dock-left'></i>
-          </button>
-          <h3>Menu</h3>
-        </div>
-      </div>
-
-        <div class="sidebar" id="sidebar">
-          <div class="top-sidebar">
-            <div class="logo">
-              <i class='bx bx-dollar-circle'></i>
-              <h2>Finance</h2>
-            </div>
-            <button id="close_sidebar">
-              <i class='bx bx-x'></i>
-            </button>
-          </div>
-          <div class="link-area">
-
-            <button class="button-content" id="receitas">
-              <i class='bx bx-wallet'></i>
-              <p>Receitas</p>
-            </button>
-
-            <button class="button-content active" id="home">
-              <i class='bx bx-home-alt-2'></i>              
-              <p>Início</p>
-            </button>
-
-            <button class="button-content" id="lembretes">
-              <i class='bx bx-calendar'></i>              
-              <p>Lembretes</p>
-            </button>
-            
-            <button class="button-content" id="desempenho">
-              <i class='bx bx-bar-chart'></i>              
-              <p>Desempenho</p>
-            </button>
-
-            <button class="button-content" id="perfil">
-              <i class='bx bx-user-circle'></i>             
-              <p>Perfil</p>
-            </button>
-
-            <button class="button-content" id="options">
-              <i class='bx bx-cog'></i>
-              <p>Opções</p>
-            </button>
-
-          </div>
-        </div>
-
-      <div id="home_page" class="main">
-        <div class="content">
-          <h1>Início</h1>
-          <br>
-          <div class="topo-receitas">
-            <div class="item">
-              <h2>Receita fixa</h2>
-              <div class="results">
-                <span>R$ 0.00</span>
-                <i class='bx bx-wallet'></i>
-              </div>
-            </div>
-            <div class="item">
-              <h2>Receita extra</h2>
-              <div class="results">
-                <span>R$ 0.00</span>
-                <i class='bx bx-coin'></i>
-              </div>
-            </div>
-            <div class="item">
-              <h2>Receita total</h2>
-              <div class="results">
-                <span>R$ 0.00</span>
-                <i class='bx bx-dollar-circle'></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="receitas_page" class="main">
-        <div class="content">
-          <h1>Receitas</h1>
-        </div>
-      </div>
-
-      <div id="lembretes_page" class="main">
-        <div class="content">
-          <h1>Lembretes</h1>
-        </div>
-      </div>
-
-      <div id="desempenho_page" class="main">
-        <div class="content">
-          <h1>Desempenho</h1>
-        </div>
-      </div>
-
-      <div id="perfil_page" class="main">
-        <div class="content">
-          <h1>Perfil</h1>
-        </div>
-      </div>
-
-      <div id="options_page" class="main">
-        <div class="content">
-          <h1>Opções</h1>
-        </div>
-      </div>
-      
     </div>
 
-    <script src="/src/js/home.js"></script>
-  </body>
+    <div class="navbar">
+      <div class="button-menu">
+        <button id="menu_btn">
+          <i class='bx bx-dock-left'></i>
+        </button>
+        <h3>Menu</h3>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="top-sidebar">
+        <div class="logo">
+          <i class='bx bx-dollar-circle'></i>
+          <h2>Finance</h2>
+        </div>
+        <button id="close_sidebar">
+          <i class='bx bx-x'></i>
+        </button>
+      </div>
+      <div class="link-area">
+
+        <button class="button-content" id="receitas">
+          <i class='bx bx-wallet'></i>
+          <p>Receitas</p>
+        </button>
+
+        <button class="button-content active" id="home">
+          <i class='bx bx-home-alt-2'></i>
+          <p>Início</p>
+        </button>
+
+        <button class="button-content" id="lembretes">
+          <i class='bx bx-calendar'></i>
+          <p>Lembretes</p>
+        </button>
+
+        <button class="button-content" id="desempenho">
+          <i class='bx bx-bar-chart'></i>
+          <p>Desempenho</p>
+        </button>
+
+        <button class="button-content" id="perfil">
+          <i class='bx bx-user-circle'></i>
+          <p>Perfil</p>
+        </button>
+
+        <button class="button-content" id="options">
+          <i class='bx bx-cog'></i>
+          <p>Opções</p>
+        </button>
+
+      </div>
+    </div>
+
+    <div id="home_page" class="main">
+      <div class="content">
+        <h1>Início</h1>
+        <br>
+        <div class="topo-receitas">
+          <div class="item">
+            <h2>Receita fixa</h2>
+            <div class="results">
+              <span>R$ 0.00</span>
+              <i class='bx bx-wallet'></i>
+            </div>
+          </div>
+          <div class="item">
+            <h2>Receita extra</h2>
+            <div class="results">
+              <span>R$ 0.00</span>
+              <i class='bx bx-coin'></i>
+            </div>
+          </div>
+          <div class="item">
+            <h2>Receita total</h2>
+            <div class="results">
+              <span>R$ 0.00</span>
+              <i class='bx bx-dollar-circle'></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="receitas_page" class="main">
+      <div class="content">
+        <h1>Receitas</h1>
+        <br>
+        <div class="cad-receitas">
+          <div class="receita-form">
+            <h2>Receitas fixas</h2>
+            <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas fixas</span>.</p>
+            <div class="input-area-receitas">
+              <div class="inputs">
+                <label>Valor</label>
+                <input type="number" id="value_fixa" placeholder="R$ 0.00" required>
+              </div>
+              <div class="inputs">
+                <label>Descrição</label>
+                <select id="select_fixa" required>
+                  <option value="year">Anual</option>
+                  <option value="mouth">Mensal</option>
+                  <option value="week">Semanal</option>
+                  <option value="day">Diário</option>
+                </select>
+              </div>
+              <button id="add_receitas">Adiconar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="lembretes_page" class="main">
+      <div class="content">
+        <h1>Lembretes</h1>
+      </div>
+    </div>
+
+    <div id="desempenho_page" class="main">
+      <div class="content">
+        <h1>Desempenho</h1>
+      </div>
+    </div>
+
+    <div id="perfil_page" class="main">
+      <div class="content">
+        <h1>Perfil</h1>
+      </div>
+    </div>
+
+    <div id="options_page" class="main">
+      <div class="content">
+        <h1>Opções</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/src/js/home.js"></script>
+</body>
+
 </html>
