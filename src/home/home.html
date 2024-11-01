@@ -131,6 +131,30 @@
               <button id="add_receitas">Adiconar</button>
             </div>
           </div>
+          <div class="receita-form">
+            <h2>Receitas extras</h2>
+            <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas extras</span>.</p>
+            <div class="input-area-receitas">
+              <div class="inputs">
+                <label>Valor</label>
+                <input type="number" id="value_extra" placeholder="R$ 0.00" required>
+              </div>
+              <div class="inputs">
+                <label>Descrição</label>
+                <select id="select_extra" required>
+                  <option value="year">Anual</option>
+                  <option value="mouth">Mensal</option>
+                  <option value="week">Semanal</option>
+                  <option value="day">Diário</option>
+                </select>
+              </div>
+              <button id="add_receitas_extra">Adiconar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-receitas">
+          <h3 id="message_results">Informações das receitas aqui</h3>
         </div>
       </div>
     </div>
