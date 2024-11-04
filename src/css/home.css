@@ -400,11 +400,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: .5rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .label-lembretes{
     display: flex;
+    align-items: center;
     gap: .5rem;
+}
+
+#vencida{
+    background: var(--color-red);
+    padding: .25rem .75rem;
+    border-radius: .25rem;
+    color: var(--color-white);
+    font-weight: 500;
 }
 
 /* Fim Lembretes */
