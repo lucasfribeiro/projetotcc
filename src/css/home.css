@@ -373,7 +373,7 @@
     overflow-y: scroll;
     margin-top: 1.5rem;
     padding: 1.5rem;
-    height: 400px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -393,6 +393,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 80dvh;
 }
 
 .lembretes{
@@ -402,8 +403,8 @@
     background: var(--color-white);
     padding: 1rem;
     border-radius: .5rem;
+    width: 70%;
     border: 1px solid var(--color-border);
-    width: 100%;
 }
 
 .lembretes p{
@@ -412,7 +413,7 @@
 }
 
 table{
-    width: 80%;
+    width: 100%;
 }
 
 .tabela{
