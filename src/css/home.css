@@ -390,33 +390,104 @@
 /* Lembretes */
 
 .lembretes-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lembretes{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     background: var(--color-white);
     padding: 1rem;
     border-radius: .5rem;
     border: 1px solid var(--color-border);
+    width: 100%;
 }
 
-.informations-lembretes{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: .5rem;
-    padding-bottom: .75rem;
-    border-bottom: 1px solid var(--color-border);
+.lembretes p{
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.label-lembretes{
+table{
+    width: 80%;
+}
+
+.tabela{
     display: flex;
     align-items: center;
-    gap: .5rem;
+    justify-content: center;
+}
+
+th, td{
+    padding: .5rem;
+    text-align: left;
+    border: 1px solid var(--color-border);
+}
+
+
+th{
+    background: var(--color-blue);
+    color: var(--color-white);
+    user-select: none;
+    border: 0;
+}
+
+#check_area{
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none; /* Para compatibilidade com navegadores antigos */
+    border: 1px solid var(--color-border);
+    border-radius: 3px; /* Canto arredondado */
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--color-blue); /* Cor de fundo ao ser selecionado */
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔"; /* Marca de seleção */
+    color: white;
+    font-size: 12px;
+     position: absolute; 
+     top: 0;
+    left: 3px; 
 }
 
 #vencida{
     background: var(--color-red);
-    padding: .25rem .75rem;
-    border-radius: .25rem;
+    text-align: center;
     color: var(--color-white);
     font-weight: 500;
+    border: 0;
+    user-select: none;
+}
+
+#sucesso{
+    background: var(--color-sucess);
+    text-align: center;
+    color: var(--color-white);
+    font-weight: 500;
+    border: 0;
+    user-select: none;
+}
+
+#aguardo{
+    background: var(--color-medium);
+    text-align: center;
+    color: var(--color-white);
+    font-weight: 500;
+    border: 0;
+    user-select: none;
 }
 
 /* Fim Lembretes */
