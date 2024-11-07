@@ -476,7 +476,7 @@ input[type="checkbox"]:checked::after {
     background: var(--color-red);
     text-align: center;
     color: var(--color-white);
-    font-weight: 500;
+    font-weight: 600;
     border: 0;
     user-select: none;
 }
@@ -485,7 +485,7 @@ input[type="checkbox"]:checked::after {
     background: var(--color-sucess);
     text-align: center;
     color: var(--color-white);
-    font-weight: 500;
+    font-weight: 600;
     border: 0;
     user-select: none;
 }
@@ -493,8 +493,8 @@ input[type="checkbox"]:checked::after {
 #aguardo{
     background: var(--color-medium);
     text-align: center;
-    color: var(--color-white);
-    font-weight: 500;
+    color: var(--color-dark);
+    font-weight: 600;
     border: 0;
     user-select: none;
 }
