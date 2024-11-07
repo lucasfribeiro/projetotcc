@@ -124,7 +124,7 @@ desempenhoBtn.addEventListener("click", () => {
      lembretesBtn.classList.remove("active");
      optionsBtn.classList.remove("active");
 
-     Desempenho.style.display = "block";
+    Desempenho.style.display = "block";
 
     Home.style.display = "none";
     Receitas.style.display = "none";
@@ -150,3 +150,47 @@ optionsBtn.addEventListener("click", () => {
     Perfil.style.display = "none";
     Desempenho.style.display = "none";
 })
+
+// Gráficos
+
+var options = {
+    series: [{
+    name: "STOCK ABC",
+    data: series.monthDataSeries1.prices
+  }],
+    chart: {
+    type: 'area',
+    height: 350,
+    zoom: {
+      enabled: false
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'straight'
+  },
+  
+  title: {
+    text: 'Fundamental Analysis of Stocks',
+    align: 'left'
+  },
+  subtitle: {
+    text: 'Price Movements',
+    align: 'left'
+  },
+  labels: series.monthDataSeries1.dates,
+  xaxis: {
+    type: 'datetime',
+  },
+  yaxis: {
+    opposite: true
+  },
+  legend: {
+    horizontalAlign: 'left'
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
