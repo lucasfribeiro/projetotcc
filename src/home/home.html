@@ -21,6 +21,55 @@
       </div>
     </div>
 
+    <div class="modal-perfil" id="modal_perfil">
+      <div class="modal-perfil-content">
+        <div class="top-modal">
+          <h2>Editar perfil</h2>
+          <button id="close_perfil">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+        <div class="modal-form">
+          <div class="inputs-perfil">
+            <label>Nome de usuário</label>
+            <input type="text" placeholder="Novo nome de usuário">
+          </div>
+          <div class="inputs-perfil">
+            <label>Nome</label>
+            <input type="text" placeholder="Novo nome">
+          </div>
+          <div class="inputs-perfil">
+            <label>Senha</label>
+            <input type="text" placeholder="Nova senha">
+          </div>
+          <div class="inputs-perfil" id="file_input">
+            <label class="custum-file-upload" for="file">
+              <div class="icon">
+                <i class='bx bx-cloud-upload'></i>
+              </div>
+              <div class="text">
+                 <span>Clique para alterar foto de perfil</span>
+                 </div>
+                 <input type="file" id="file">
+              </label>
+          </div>
+          <div class="inputs-perfil">
+            <label>Email</label>
+            <input type="email" placeholder="Novo email">
+          </div>
+          <div class="inputs-perfil">
+            <label>Telefone</label>
+            <input type="tel" placeholder="Novo telefone">
+          </div>
+          
+          <div class="button-perfil">
+            <button id="confirm">Confirmar</button>
+            <button id="cancel">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="navbar">
       <div class="button-menu">
         <button id="menu_btn">
@@ -288,7 +337,7 @@
                 <p>email@email.com</p>
                 <p>(99) 99999-9999</p>
   
-                <button>Editar perfil</button>
+                <button id="edit_perfil">Editar perfil</button>
               </div>
             </div>
           </div>

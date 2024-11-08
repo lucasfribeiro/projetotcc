@@ -562,4 +562,137 @@ input[type="checkbox"]:checked::after {
     font-size: 16px;
 }
 
+.modal-perfil{
+    display: block;
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+}
+
+.modal-perfil-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    width: 550px;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.top-modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.top-modal button{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.inputs-perfil{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#file_input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.inputs-perfil input{
+    border: 1px solid var(--color-border);
+    padding: .5rem;
+    outline: none;
+    border-radius: .5rem;
+}
+
+.button-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-perfil button{
+    padding: .5rem .95rem ;
+    border-radius: .5rem;
+    cursor: pointer;
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+#confirm{
+    background: var(--color-sucess);
+}
+#cancel{
+    background: var(--color-red);
+}
+
+.custum-file-upload {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--color-border-dark);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon i {
+    font-size: 80px;
+    color: var(--color-border-dark);
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: var(--color-border-dark);
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+
+
 /* Fim perfil */
+
