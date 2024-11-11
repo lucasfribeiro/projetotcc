@@ -151,6 +151,22 @@ optionsBtn.addEventListener("click", () => {
     Desempenho.style.display = "none";
 })
 
+// Modal perfil 
+
+const editPerfil = document.getElementById("edit_perfil");
+const closeModalPerfil = document.getElementById("close_perfil");
+const modalPerfil = document.getElementById("modal_perfil");
+const confirm = document.getElementById("confirm");
+const cancel = document.getElementById("cancel");
+
+editPerfil.addEventListener("click", () => {
+  modalPerfil.style.display = "flex"
+})
+
+closeModalPerfil.addEventListener("click", () => {
+  modalPerfil.style.display = "none"
+})
+
 // Gráficos
 
 var options = {
