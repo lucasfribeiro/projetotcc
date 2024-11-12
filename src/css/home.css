@@ -978,6 +978,27 @@ input[type="checkbox"]:checked::after {
 
 /* modal options */
 
+
+#inicio_opt{
+    display: none;
+}
+
+#receitas_opt{
+    display: none;
+}
+
+#lembretes_opt{
+    display: none;
+}
+
+#desempenho_opt{
+    display: none;
+}
+
+#perfil_opt{
+    display: none;
+}
+
 .modal-option{
     display: none;
     width: 100%;
@@ -996,9 +1017,58 @@ input[type="checkbox"]:checked::after {
     align-items: center;
     justify-content: center;
     background: var(--color-white);
-    /* width: 1124px; */
+    padding: 1rem;
+    width: 1624px; 
     border-radius: .5rem;
 }
+
+.top-modal-option{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.top-modal-option button{
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modal-option-content{
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-option-content img{
+    width: 60rem;
+    border: 1px solid var(--color-background);
+    border-radius: .5rem;
+}
+
+.text-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 19px;
+    user-select: none;
+}
+
+.text-option p{
+    text-align: justify;
+}
+
+.email{
+    font-size: 18px;
+    text-align: center;
+}
+
 /* fim modal options */
 
 /* fim opções */

@@ -204,3 +204,65 @@ xaxis: {
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
+
+// Modais de informações
+
+const inicioOpt = document.getElementById("inicio_opt");
+const inicioOptBtn = document.getElementById("home_option");
+const closeinicioOpt = document.getElementById("close_inicio");
+
+inicioOptBtn.addEventListener("click", () => {
+  inicioOpt.style.display = "flex"
+})
+
+closeinicioOpt.addEventListener("click", () => {
+  inicioOpt.style.display = "none"
+})
+
+const receitasOpt = document.getElementById("receitas_opt");
+const receitasOptBtn = document.getElementById("receitas_option");
+const closereceitasOpt = document.getElementById("close_receitas");
+
+receitasOptBtn.addEventListener("click", () => {
+  receitasOpt.style.display = "flex"
+})
+
+closereceitasOpt.addEventListener("click", () => {
+  receitasOpt.style.display = "none"
+})
+
+const lembretesOpt = document.getElementById("lembretes_opt");
+const lembretesOptBtn = document.getElementById("lembretes_option");
+const closelembretesOpt = document.getElementById("close_lembretes");
+
+lembretesOptBtn.addEventListener("click", () => {
+  lembretesOpt.style.display = "flex"
+})
+
+closelembretesOpt.addEventListener("click", () => {
+  lembretesOpt.style.display = "none"
+})
+
+const desempenhoOpt = document.getElementById("desempenho_opt");
+const desempenhoOptBtn = document.getElementById("desempenho_option");
+const closedesempenhoOpt = document.getElementById("close_desempenho");
+
+desempenhoOptBtn.addEventListener("click", () => {
+  desempenhoOpt.style.display = "flex"
+})
+
+closedesempenhoOpt.addEventListener("click", () => {
+  desempenhoOpt.style.display = "none"
+})
+
+const perfilOpt = document.getElementById("perfil_opt");
+const perfilOptBtn = document.getElementById("perfil_option");
+const closeperfilOpt = document.getElementById("close_perfil_modal");
+
+perfilOptBtn.addEventListener("click", () => {
+  perfilOpt.style.display = "flex"
+})
+
+closeperfilOpt.addEventListener("click", () => {
+  perfilOpt.style.display = "none"
+})
