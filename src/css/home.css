@@ -245,26 +245,32 @@
 
 #home_page{
     display: block;
+    overflow-y: scroll;
 }
 
 #receitas_page{
     display: none;
+    overflow-y: scroll;
 }
 
 #lembretes_page{
     display: none;
+    overflow-y: scroll;
 }
 
 #desempenho_page{
     display: none;
+    overflow-y: scroll;
 }
 
 #perfil_page{
     display: none;
+    overflow-y: scroll;
 }
 
 #options_page{
     display: none;
+    overflow-y: scroll;
 }
 
 /* Fim do Main */
@@ -818,3 +824,54 @@ input[type="checkbox"]:checked::after {
 
 /* Fim perfil */
 
+/* Desempenho */
+
+.chart-info{
+    background: var(--color-white);
+    padding: .75rem;
+    border-radius: .75rem;
+    border: 1px solid var(--color-border);
+}
+
+.saldo-info{
+    background: var(--color-white);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-border);
+}
+
+.saldo-info h4{
+    padding-bottom: .5rem;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.infos-desemp{
+    display: flex;
+    margin-top: .5rem;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.infos-desemp h3{
+    background: var(--color-blue);
+    padding: .25rem .65rem;
+    color: var(--color-white);
+    border-radius: .35rem;
+}
+
+.receitas-desemp{
+    display: flex;
+    gap: .5rem;
+}
+
+.receitas-desemp p,
+.receitas-desemp span{
+    font-size: 18px;
+}
+
+.receitas-desemp span{
+    font-weight: 600;
+}
+
+/* fim desempenho */

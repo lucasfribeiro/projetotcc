@@ -170,43 +170,37 @@ closeModalPerfil.addEventListener("click", () => {
 // Gráficos
 
 var options = {
-    series: [{
-    name: "STOCK ABC",
-    data: series.monthDataSeries1.prices
-  }],
-    chart: {
-    type: 'area',
-    height: 350,
-    zoom: {
-      enabled: false
-    }
-  },
-  dataLabels: {
+  series: [{
+    name: "Valor",
+    data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 200, 120, 46]
+}],
+  chart: {
+  height: 350,
+  type: 'line',
+  zoom: {
     enabled: false
-  },
-  stroke: {
-    curve: 'straight'
-  },
-  
-  title: {
-    text: 'Fundamental Analysis of Stocks',
-    align: 'left'
-  },
-  subtitle: {
-    text: 'Price Movements',
-    align: 'left'
-  },
-  labels: series.monthDataSeries1.dates,
-  xaxis: {
-    type: 'datetime',
-  },
-  yaxis: {
-    opposite: true
-  },
-  legend: {
-    horizontalAlign: 'left'
   }
-  };
+},
+dataLabels: {
+  enabled: false
+},
+stroke: {
+  curve: 'straight'
+},
+title: {
+  text: 'Saldos por mês',
+  align: 'left'
+},
+grid: {
+  row: {
+    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+    opacity: 0.5
+  },
+},
+xaxis: {
+  categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+}
+};
 
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
-  chart.render();
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
