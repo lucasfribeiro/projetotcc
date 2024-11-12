@@ -3,6 +3,7 @@
 :root{
     --color-dark: #010101;
     --color-blue: #0077fa;
+    --color-blue-hover: #3797ff;
     --color-white: #ffffff;
     --color-background: #eaedf7;
     --color-border: #a6abb9c7;
@@ -325,6 +326,116 @@
     color: var(--color-blue);
 }
 
+
+
+/* Despesas */
+
+.centro-despesas{
+    background: var(--color-white);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-border);
+}
+
+.centro-despesas p{
+    padding: .5rem 0;
+    margin: 0 0 0.5rem ;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.input-area-desp{
+    display: flex;
+    align-items: end;
+    gap: .75rem;
+}
+
+.input-area-desp button{
+    background: var(--color-blue);
+    padding: .5rem .75rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-weight: 600;
+    border-radius: .35rem;
+    color: var(--color-white);
+}
+
+.input-area-desp button:hover{
+    background: var(--color-blue-hover);
+}
+
+.input-content-desp input{
+    border: 1px solid var(--color-border);
+    padding: .5rem;
+    margin-top: .25rem;
+    border-radius: .35rem;
+    outline: none;
+    width: 100%;
+}
+
+.info-desp{
+    margin-top: .75rem;
+    display: flex;
+    padding: .5rem;
+    border-top: 1px dashed var(--color-border);
+    align-items: center;
+    justify-content: center;
+    height: 210px;
+    overflow-y: scroll;
+}
+
+.info-desp h3{
+    color: var(--color-border);
+    font-weight: 500;
+}
+
+/* Fim despesas */
+
+/* Saldo */
+
+.saldo{
+    background: var(--color-white);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-border);
+}
+
+.saldo h2{
+    padding-bottom: .5rem;
+    border-bottom: 1px dashed var(--color-border);
+    margin-bottom: .5rem;
+}
+
+.info-saldo{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.info-saldo span{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-border-dark);
+}
+
+.info-saldo button{
+    padding: .5rem .75rem;
+    cursor: pointer;
+    border-radius: .35rem;
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+    background: var(--color-blue);
+}
+
+.info-saldo button:hover{
+    background: var(--color-blue-hover);
+}
+
+/* Fim saldo */
+
 /* Fim do Início */
 
 /* Receitas */
@@ -363,17 +474,22 @@
 .input-area-receitas select{
     border: 1px solid var(--color-border);
     padding: .5rem;
-    border-radius: .5rem;
+    border-radius: .35rem;
     outline: none;
 }
 
 .input-area-receitas button{
     padding: .5rem 1rem;
-    border-radius: .5rem;
+    border-radius: .35rem;
+    transition: all .2s ease-in;
     background: var(--color-blue);
     color: var(--color-white);
     font-weight: 600;
     cursor: pointer;
+}
+
+.input-area-receitas button:hover{
+    background: var(--color-blue-hover);
 }
 
 .results-receitas{
@@ -394,6 +510,7 @@
     user-select: none;
 }
 /* Fim receitas */
+
 
 /* Lembretes */
 
@@ -513,7 +630,8 @@ input[type="checkbox"]:checked::after {
 
 .user-informations{
  background: var(--color-white);
- width: 700px; 
+ width: 700px;
+ user-select: none; 
  padding: 2rem;
  border-radius: .75rem;
  border: 1px solid var(--color-border);
@@ -530,7 +648,7 @@ input[type="checkbox"]:checked::after {
     display: flex;
     border-top: 1px solid var(--color-border);
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 4rem;
     margin-top: 1rem;
     padding-top: 15px;
@@ -555,11 +673,16 @@ input[type="checkbox"]:checked::after {
 .info-profile button{
     padding: .5rem;
     cursor: pointer;
+    transition: all .2s ease-in-out;
     border-radius: .35rem ;
     background: var(--color-blue);
     color: var(--color-white) ;
     font-weight: 600;
     font-size: 16px;
+}
+
+.info-profile button:hover{
+    background: var(--color-blue-hover);
 }
 
 .modal-perfil{
