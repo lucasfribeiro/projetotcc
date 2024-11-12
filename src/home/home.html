@@ -49,10 +49,10 @@
                 <i class='bx bx-cloud-upload'></i>
               </div>
               <div class="text">
-                 <span>Clique para alterar foto de perfil</span>
-                 </div>
-                 <input type="file" id="file">
-              </label>
+                <span>Clique para alterar foto de perfil</span>
+              </div>
+              <input type="file" id="file">
+            </label>
           </div>
           <div class="inputs-perfil">
             <label>Email</label>
@@ -62,7 +62,7 @@
             <label>Telefone</label>
             <input type="tel" placeholder="Novo telefone">
           </div>
-          
+
           <div class="button-perfil">
             <button id="confirm">Confirmar</button>
             <button id="cancel">Cancelar</button>
@@ -154,7 +154,8 @@
         </div>
         <div class="centro-despesas">
           <h2>Despesas</h2>
-          <p>Preencha todos os campos obrigatórios para cadastrar cada <span style="font-weight: 600;">despesa</span></p>
+          <p>Preencha todos os campos obrigatórios para cadastrar cada <span style="font-weight: 600;">despesa</span>
+          </p>
           <div class="input-area-desp">
             <div class="input-content-desp">
               <label>Nome <span style="color: #de212e;">*</span></label>
@@ -189,7 +190,7 @@
               <label>Desconto</label>
               <input type="number" placeholder="0.00">
             </div>
-            
+
             <button id="add_desp">
               Adicionar
             </button>
@@ -291,7 +292,7 @@
                     <th>Finalizado</th>
                   </tr>
                 </thead>
-  
+
                 <tbody>
                   <tr>
                     <td>Água</td>
@@ -362,10 +363,10 @@
                 </tbody>
               </table>
             </div>
-            
+
+          </div>
         </div>
       </div>
-    </div>
     </div>
 
     <div id="desempenho_page" class="main">
@@ -427,8 +428,8 @@
         </div>
 
       </div>
-          
-      </div>
+
+    </div>
 
     <div id="perfil_page" class="main">
       <div class="content">
@@ -443,11 +444,11 @@
               </div>
               <div class="info-profile">
                 <h1>Nome de usuário</h2>
-                <p>Nome completo</p>
-                <p>email@email.com</p>
-                <p>(99) 99999-9999</p>
-  
-                <button id="edit_perfil">Editar perfil</button>
+                  <p>Nome completo</p>
+                  <p>email@email.com</p>
+                  <p>(99) 99999-9999</p>
+
+                  <button id="edit_perfil">Editar perfil</button>
               </div>
             </div>
           </div>
@@ -458,6 +459,75 @@
     <div id="options_page" class="main">
       <div class="content">
         <h1>Opções</h1>
+        <br>
+        <div class="options-content">
+          <div class="text">
+            <h3>Nesta página você poderá sanar algumas dúvidas!</h3>
+            <p><span>Sobe o website: </span>Essa ferramenta permite que os usuários registrem receitas fixas e
+              variáveis, além de despesas específicas, para calcular o saldo e o gasto mensal, utilizando da criação de
+              gráficos para que o usuário possa controlar suas despesas. O Finance é uma ferramenta essencial para o
+              controle de gastos, pois ajuda a organizar a vida financeira de quem o utiliza de forma clara e
+              transparente. Com base nas receitas e despesas inseridas, o Finance
+              calcula automaticamente o saldo e o gasto mensal, fornecendo ao usuário uma noção clara de status
+              financeiro. Isso permite que os utilizadores tenham uma compreensão mais precisa de suas finanças e tomem
+              decisões precisas sobre como gerenciar seu dinheiro. Por fim, o Finance é um passo importante para
+              modernizar a organização de tarefas financeiras, melhorando o desempenho do controle econômico dos
+              usuários que a utilizam. Além disso, essa aplicação é fácil de usar e pode ser acessada a partir de
+              qualquer dispositivo com acesso à internet.</p>
+          </div>
+          <div class="links-options">
+            <h3>Qual página você deseja consultar?</h3>
+            <div class="button-options">
+              <button id="home_option">
+                Início
+              </button>
+              <button id="receitas_option">
+                Receitas
+              </button>
+              <button id="lembretes_option">
+                Lembretes
+              </button>
+              <button id="desempenho_option">
+                Desempenho
+              </button>
+              <button id="perfil_option">
+                Perfil
+              </button>
+            </div>
+          </div>
+
+          <div class="contato">
+            <h3>Caso você queira alguma informação que não foi citado nesta página, consulte nossa equipe através do
+              email.</h3>
+            <span>
+              <i class='bx bx-envelope'></i>
+              <p>tcc.finance6@gmail.com</p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-option" id="inicio_opt">
+      <div class="modal-content-opt">
+        <div class="top-modal-option">
+          <h2>Início</h2>
+          <button id="close_inicio">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+        <div class="modal-option-content">
+          <div class="image-option">
+            <img src="/assets/images/inicio-opt.jpg" alt="">
+          </div>
+          <div class="text-option">
+            <p>A tela inicial do Finance é a mais importante do sistema, aqui você irá cadastrar suas despesas e receber os
+              valores da receitas. Preenchendo todos os campos solicitados e apertando o botão "Adicionar", as informações
+              das despesas aparecerão logo abaixo. Em seguida, clique no botão "Calcular" e o saldo será exibido
+              instantaneamente nesta ultima seção.</p>
+              <p>Qualquer outra dúvidanos notifique através do email: tcc.finance6@gmail.com</p>
+          </div>
+        </div>
       </div>
     </div>
 
