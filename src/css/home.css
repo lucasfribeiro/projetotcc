@@ -3,6 +3,7 @@
 :root{
     --color-dark: #010101;
     --color-blue: #0077fa;
+    --color-blue-variant: #b3d8ff;
     --color-blue-hover: #3797ff;
     --color-white: #ffffff;
     --color-background: #eaedf7;
@@ -11,7 +12,7 @@
     --color-blur:rgba(0, 0, 0, .5);
 
     --color-red:#de212e;
-    --color-red-variant:#e87d84;
+    --color-red-variant:#ffbfc3;
     --color-sucess:#0bbe50;
     --color-sucess-variant: #7be8a5;
     --color-medium: #ffbf00;
@@ -382,40 +383,70 @@
 }
 
 .info-desp{
-    margin-top: .75rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    border-top: 1px dashed var(--color-border);
-    align-items: center;
-    justify-content: space-between;
-}
-
-.info-desp-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1rem;
-    border-bottom: 1px dashed var(--color-border);
-}
-
-.info-desp-content label{
-    user-select: none;
-}
-
-.despeas-content{
-    display: flex;
-    gap: .35rem;
-    width: 100%;
-    
+    border: 1px solid var(--color-border);
+    margin: 1rem 0px;
+    padding: 2rem 1.35rem;
+    border-radius: .5rem;
 }
 
 .info-desp h3{
     color: var(--color-border);
-    font-weight: 500;
-    padding: 1rem;
+    font-weight: 600;
+    user-select: none ;
+}
+
+.info-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--color-border);
+}
+
+.total-desp{
+    border: 1px solid var(--color-border);
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+}
+
+
+.desp span{
+    font-weight: 600;
+}
+
+.desp label{
+    user-select: none;
+}
+
+.buttons-desp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.buttons-desp button{
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: .35rem;
+}
+
+#delete_desp{
+    background: var(--color-red-variant);
+    color: var(--color-red);
+}
+
+#edit_desp{
+    background: var(--color-blue-variant);
+    color: var(--color-blue);
+}
+
+.buttons-desp i{
+    font-size: 18px;
 }
 
 /* Fim despesas */
@@ -426,7 +457,6 @@
     background: var(--color-white);
     margin-top: 1rem;
     padding: 1rem;
-    width: 98%;
     border-radius: .5rem;
     border: 1px solid var(--color-border);
 }
