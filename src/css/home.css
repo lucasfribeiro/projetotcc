@@ -687,6 +687,26 @@
     color: var(--color-blue);
 }
 
+/* Responsividade Lembretes */
+
+@media screen and (max-width: 1506px){
+    .info-lembr{
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .lembr{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .button-lembr{
+        width: 100%;
+    }
+}
+
+/* Fim Responsividade lembretes' */
+
 /* Fim Lembretes */
 
 /* Perfil */
