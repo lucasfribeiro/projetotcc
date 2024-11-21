@@ -14,9 +14,9 @@
     --color-red:#de212e;
     --color-red-variant:#ffbfc3;
     --color-sucess:#0bbe50;
-    --color-sucess-variant: #7be8a5;
-    --color-medium: #ffbf00;
-    --color-medium-variant:#ffdf80;
+    --color-sucess-variant: #b4ffd1;
+    --color-medium: #e6ac00;
+    --color-medium-variant:#fdeab2;
     
 }
 
@@ -601,106 +601,85 @@
 /* Lembretes */
 
 .lembretes-content{
+    background: var(--color-white);
+    padding: 1.25rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: .5rem;
+}
+
+.info-lembr{
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 80dvh;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--color-border);
+    padding: 1rem 0;
 }
 
-.lembretes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--color-white);
-    height: 600px;
-    padding: 1rem;
-    border-radius: .5rem;
-    width: 100%;
-    border: 1px solid var(--color-border);
+.lembretes-content h3{
+    color: var(--color-border);
 }
 
-.lembretes p{
-    font-size: 1.1rem;
+.lembr span{
     font-weight: 600;
 }
 
-table{
-    width: 100%;
-}
-
-.tabela{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-th, td{
-    padding: .5rem;
-    text-align: left;
-    border: 1px solid var(--color-border);
-}
-
-
-th{
-    background: var(--color-blue);
-    color: var(--color-white);
+.lembr label{
     user-select: none;
-    border: 0;
-}
-
-#check_area{
-    text-align: center;
-}
-
-input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    appearance: none;
-    -webkit-appearance: none; /* Para compatibilidade com navegadores antigos */
-    border: 1px solid var(--color-border);
-    border-radius: 3px; /* Canto arredondado */
-    cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-    background-color: var(--color-blue); /* Cor de fundo ao ser selecionado */
-    position: relative;
-}
-
-input[type="checkbox"]:checked::after {
-    content: "✔"; /* Marca de seleção */
-    color: white;
-    font-size: 12px;
-     position: absolute; 
-     top: 0;
-    left: 3px; 
 }
 
 #vencida{
-    background: var(--color-red);
-    text-align: center;
-    color: var(--color-white);
-    font-weight: 600;
-    border: 0;
+    background: var(--color-red-variant);
+    padding: .35rem .75rem;
+    border-radius: .5rem;
+    color: var(--color-red);
     user-select: none;
 }
 
-#sucesso{
-    background: var(--color-sucess);
-    text-align: center;
-    color: var(--color-white);
-    font-weight: 600;
-    border: 0;
+#pago{
+    background: var(--color-sucess-variant);
+    padding: .35rem 1.5rem;
+    border-radius: .5rem;
+    color: var(--color-sucess);
     user-select: none;
 }
 
-#aguardo{
-    background: var(--color-medium);
-    text-align: center;
-    color: var(--color-dark);
-    font-weight: 600;
-    border: 0;
+#pagar{
+    background: var(--color-medium-variant);
+    padding: .35rem 1.3rem;
+    border-radius: .5rem;
+    color: var(--color-medium);
     user-select: none;
+}
+
+.button-lembr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.button-lembr button{
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: .35rem;
+}
+
+.button-lembr i{
+    font-size: 18px;
+}
+
+#delete_lembr{
+    background: var(--color-red-variant);
+    color: var(--color-red);
+}
+
+#check_lembr{
+    background: var(--color-blue-variant);
+    color: var(--color-blue);
 }
 
 /* Fim Lembretes */
