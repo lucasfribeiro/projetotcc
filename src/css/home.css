@@ -1249,6 +1249,12 @@
     text-align: center;
 }
 
+@media screen and (max-width: 1065px){
+    #options{
+        display: none;
+    }
+}
+
 /* fim modal options */
 
 /* fim opções */
