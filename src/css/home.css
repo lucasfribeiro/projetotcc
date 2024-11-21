@@ -543,7 +543,7 @@
     flex-direction: column;
     background: var(--color-white);
     padding: 1rem;
-    width: 550px;
+    width: 100%;
     border-radius: .5rem;
     border: 1px solid var(--color-border);
 }
@@ -559,6 +559,7 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    width: 100%;
 }
 
 .input-area-receitas input,
@@ -585,15 +586,77 @@
 
 .results-receitas{
     background: var(--color-white);
-    overflow-y: scroll;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding: 1.5rem;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: .5rem;
     border: 1px solid var(--color-border);
+    border-radius: .5rem;
+}
+
+.rec-info{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px dashed var(--color-border);
+    padding: .75rem 0;
+}
+
+.rec{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-rec{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.value-rec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spans-rec{
+    display: flex;
+    gap: 1rem;
+    user-select: none;
+}
+
+.spans-rec span{
+    font-weight: 600;
+    user-select: all;
+    font-size: 18px;
+}
+
+.button-rec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.button-rec button{
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: .35rem;
+}
+
+.button-rec i{
+    font-size: 18px;
+}
+
+#edit_rec{
+    background: var(--color-blue-variant);
+    color: var(--color-blue);
+}
+
+#delete_rec{
+    background: var(--color-red-variant);
+    color: var(--color-red);
 }
 
 .results-receitas h3{

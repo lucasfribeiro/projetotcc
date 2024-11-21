@@ -199,7 +199,7 @@
 
           <div class="info-desp">
             <!-- <h3>Informações das despesas aqui</h3> -->
-             <div class="info-content">
+            <div class="info-content">
 
               <div class="desp">
                 <label>Nome:</label>
@@ -245,700 +245,761 @@
                 </button>
               </div>
 
-             </div>
-            
+            </div>
+
           </div>
-            
+
           <div class="total-desp">
             <h2>Total: R$ <span id="total_desp">0.00</span></h2>
           </div>
-      </div>
+        </div>
 
-      <div class="saldo">
-        <h2>Saldo</h2>
-        <div class="info-saldo">
-          <span>R$ <span id="saldo_value">0.00</span></span>
-          <button id="calc_saldo">Calcular</button>
+        <div class="saldo">
+          <h2>Saldo</h2>
+          <div class="info-saldo">
+            <span>R$ <span id="saldo_value">0.00</span></span>
+            <button id="calc_saldo">Calcular</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="receitas_page" class="main">
-    <div class="content">
-      <h1>Receitas</h1>
-      <br>
-      <div class="cad-receitas">
-        <div class="receita-form">
-          <h2>Receitas fixas</h2>
-          <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas fixas</span>.</p>
-          <div class="input-area-receitas">
-            <div class="inputs">
-              <label>Valor</label>
-              <input type="number" id="value_fixa" placeholder="R$ 0.00" required>
+    <div id="receitas_page" class="main">
+      <div class="content">
+        <h1>Receitas</h1>
+        <br>
+        <div class="cad-receitas">
+          <div class="receita-form">
+            <h2>Receitas fixas</h2>
+            <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas fixas</span>.</p>
+            <div class="input-area-receitas">
+              <div class="inputs">
+                <label>Valor</label>
+                <input type="number" id="value_fixa" placeholder="R$ 0.00" required>
+              </div>
+              <div class="inputs">
+                <label>Descrição</label>
+                <select id="select_fixa" required>
+                  <option value="year">Anual</option>
+                  <option value="mouth">Mensal</option>
+                  <option value="week">Semanal</option>
+                  <option value="day">Diário</option>
+                </select>
+              </div>
+              <button id="add_receitas">Adicionar</button>
             </div>
-            <div class="inputs">
-              <label>Descrição</label>
-              <select id="select_fixa" required>
-                <option value="year">Anual</option>
-                <option value="mouth">Mensal</option>
-                <option value="week">Semanal</option>
-                <option value="day">Diário</option>
-              </select>
-            </div>
-            <button id="add_receitas">Adicionar</button>
           </div>
-        </div>
-        <div class="receita-form">
-          <h2>Receitas extras</h2>
-          <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas extras</span>.</p>
-          <div class="input-area-receitas">
-            <div class="inputs">
-              <label>Valor</label>
-              <input type="number" id="value_extra" placeholder="R$ 0.00" required>
-            </div>
-            <div class="inputs">
-              <label>Descrição</label>
-              <select id="select_extra" required>
-                <option value="year">Anual</option>
-                <option value="mouth">Mensal</option>
-                <option value="week">Semanal</option>
-                <option value="day">Diário</option>
-              </select>
-            </div>
-            <button id="add_receitas_extra">Adicionar</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="results-receitas">
-        <h3 id="message_results">Informações das receitas aqui</h3>
-      </div>
-    </div>
-  </div>
-
-  <div id="lembretes_page" class="main">
-    <div class="content">
-      <h1>Lembretes</h1>
-      <br>
-      <div class="lembretes-content">
-        <!-- <h3>Lembretes das despesas aqui</h3> -->
-         
-        <div class="info-lembr">
-          <div class="lembr">
-            <label>Nome:</label>
-            <span>Água</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Valor:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Vencimento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Pagamento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Multa:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Juros:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Desconto:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Situação:</label>
-            <span id="vencida">Vencida</span>
-           </div>
-  
-           <div class="button-lembr">
-             <button id="check_lembr" title="Confirmar pagamento">
-               <i class='bx bx-check'></i>
-             </button>
-            <button id="delete_lembr" title="Deletar lembrete">
-              <i class='bx bx-trash'></i>
-            </button>
-           </div>
-        </div>
-        <div class="info-lembr">
-          <div class="lembr">
-            <label>Nome:</label>
-            <span>Água</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Valor:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Vencimento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Pagamento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Multa:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Juros:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Desconto:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Situação:</label>
-            <span id="pago">Pago</span>
-           </div>
-  
-           <div class="button-lembr">
-             <button id="check_lembr" title="Confirmar pagamento">
-               <i class='bx bx-check'></i>
-             </button>
-            <button id="delete_lembr" title="Deletar lembrete">
-              <i class='bx bx-trash'></i>
-            </button>
-           </div>
-        </div>
-        <div class="info-lembr">
-          <div class="lembr">
-            <label>Nome:</label>
-            <span>Água</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Valor:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Vencimento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Pagamento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Multa:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Juros:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Desconto:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Situação:</label>
-            <span id="pago">Pago</span>
-           </div>
-  
-           <div class="button-lembr">
-             <button id="check_lembr" title="Confirmar pagamento">
-               <i class='bx bx-check'></i>
-             </button>
-            <button id="delete_lembr" title="Deletar lembrete">
-              <i class='bx bx-trash'></i>
-            </button>
-           </div>
-        </div>
-        <div class="info-lembr">
-          <div class="lembr">
-            <label>Nome:</label>
-            <span>Água</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Valor:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Vencimento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Pagamento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Multa:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Juros:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Desconto:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Situação:</label>
-            <span id="vencida">Vencida</span>
-           </div>
-  
-           <div class="button-lembr">
-             <button id="check_lembr" title="Confirmar pagamento">
-               <i class='bx bx-check'></i>
-             </button>
-            <button id="delete_lembr" title="Deletar lembrete">
-              <i class='bx bx-trash'></i>
-            </button>
-           </div>
-        </div>
-        <div class="info-lembr">
-          <div class="lembr">
-            <label>Nome:</label>
-            <span>Água</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Valor:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Vencimento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Pagamento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Multa:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Juros:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Desconto:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Situação:</label>
-            <span id="pagar">Pagar</span>
-           </div>
-  
-           <div class="button-lembr">
-             <button id="check_lembr" title="Confirmar pagamento">
-               <i class='bx bx-check'></i>
-             </button>
-            <button id="delete_lembr" title="Deletar lembrete">
-              <i class='bx bx-trash'></i>
-            </button>
-           </div>
-        </div>
-        <div class="info-lembr">
-          <div class="lembr">
-            <label>Nome:</label>
-            <span>Água</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Valor:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Vencimento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Pagamento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Multa:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Juros:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Desconto:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Situação:</label>
-            <span id="pago">Pago</span>
-           </div>
-  
-           <div class="button-lembr">
-             <button id="check_lembr" title="Confirmar pagamento">
-               <i class='bx bx-check'></i>
-             </button>
-            <button id="delete_lembr" title="Deletar lembrete">
-              <i class='bx bx-trash'></i>
-            </button>
-           </div>
-        </div>
-        <div class="info-lembr">
-          <div class="lembr">
-            <label>Nome:</label>
-            <span>Água</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Valor:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Vencimento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Pagamento:</label>
-            <span>01/10/2024</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Multa:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Juros:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Desconto:</label>
-            <span>R$ 0.00</span>
-           </div>
-  
-           <div class="lembr">
-            <label>Situação:</label>
-            <span id="pagar">Pagar</span>
-           </div>
-  
-           <div class="button-lembr">
-             <button id="check_lembr" title="Confirmar pagamento">
-               <i class='bx bx-check'></i>
-             </button>
-            <button id="delete_lembr" title="Deletar lembrete">
-              <i class='bx bx-trash'></i>
-            </button>
-           </div>
-        </div>
-    
-      </div>
-    </div>
-  </div>
-
-  <div id="desempenho_page" class="main">
-
-    <div class="content">
-
-      <h1>Desempenho</h1>
-
-      <br>
-
-      <div class="chart-info">
-
-        <div id="chart"></div>
-
-      </div>
-
-      <div class="saldo-info">
-
-        <h4>Informações dos saldos mensais</h4>
-
-        <div class="infos-desemp">
-          <h3>Mês: 01</h3>
-          <div class="receitas-desemp">
-            <p>Receita fixa: </p>
-            <span>R$ 0.00</span>
-          </div>
-          <div class="receitas-desemp">
-            <p>Receita extra: </p>
-            <span>R$ 0.00</span>
-          </div>
-          <div class="receitas-desemp">
-            <p>Total de despesas: </p>
-            <span>R$ 0.00</span>
-          </div>
-          <div class="receitas-desemp">
-            <p>Saldo: </p>
-            <span style="color: #0077fa;">R$ 0.00</span>
-          </div>
-        </div>
-        <div class="infos-desemp">
-          <h3>Mês: 02</h3>
-          <div class="receitas-desemp">
-            <p>Receita fixa: </p>
-            <span>R$ 0.00</span>
-          </div>
-          <div class="receitas-desemp">
-            <p>Receita extra: </p>
-            <span>R$ 0.00</span>
-          </div>
-          <div class="receitas-desemp">
-            <p>Total de despesas: </p>
-            <span>R$ 0.00</span>
-          </div>
-          <div class="receitas-desemp">
-            <p>Saldo: </p>
-            <span style="color: #0077fa;">R$ 0.00</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div id="perfil_page" class="main">
-    <div class="content">
-      <h1>Perfil</h1>
-      <br>
-      <div class="perfil-content">
-        <div class="user-informations">
-          <p class="title-profile">Informações do usuário</p>
-          <div class="profile">
-            <div class="img">
-              <img src="/assets/images/user_avatar.png" alt="">
-            </div>
-            <div class="info-profile">
-              <h1>Nome de usuário</h2>
-                <p>Nome completo</p>
-                <p>email@email.com</p>
-                <p>(99) 99999-9999</p>
-
-                <button id="edit_perfil">Editar perfil</button>
+          <div class="receita-form">
+            <h2>Receitas extras</h2>
+            <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas extras</span>.</p>
+            <div class="input-area-receitas">
+              <div class="inputs">
+                <label>Valor</label>
+                <input type="number" id="value_extra" placeholder="R$ 0.00" required>
+              </div>
+              <div class="inputs">
+                <label>Descrição</label>
+                <select id="select_extra" required>
+                  <option value="year">Anual</option>
+                  <option value="mouth">Mensal</option>
+                  <option value="week">Semanal</option>
+                  <option value="day">Diário</option>
+                </select>
+              </div>
+              <button id="add_receitas_extra">Adicionar</button>
             </div>
           </div>
         </div>
+
+        <div class="results-receitas">
+          <!-- <h3 id="message_results">Informações das receitas aqui</h3> -->
+          <div class="rec-content">
+
+            <div class="rec-info">
+
+              <div class="rec">
+                <div class="title-rec">
+                  <p>Receita fixa</p>
+                </div>
+                <div class="value-rec">
+
+                  <div class="spans-rec">
+                    <p>Valor: <span>R$ 0.00</span></p>
+                    <p>Descrição: <span>Mensal</span></p>
+                  </div>
+
+                  <div class="button-rec">
+
+                    <button id="delete_rec">
+                      <i class='bx bx-trash'></i>
+                    </button>
+
+                    <button id="edit_rec">
+                      <i class='bx bx-pencil'></i>
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="rec-info">
+
+              <div class="rec">
+                <div class="title-rec">
+                  <p>Receita extra</p>
+                </div>
+                <div class="value-rec">
+
+                  <div class="spans-rec">
+                    <p>Valor: <span>R$ 0.00</span></p>
+                    <p>Descrição: <span>Semanal</span></p>
+                  </div>
+
+                  <div class="button-rec">
+
+                    <button id="delete_rec">
+                      <i class='bx bx-trash'></i>
+                    </button>
+
+                    <button id="edit_rec">
+                      <i class='bx bx-pencil'></i>
+                    </button>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="options_page" class="main">
-    <div class="content">
-      <h1>Opções</h1>
-      <br>
-      <div class="options-content">
-        <div class="text">
-          <h3>Nesta página você poderá sanar algumas dúvidas!</h3>
-          <p><span>Sobe o website: </span>Essa ferramenta permite que os usuários registrem receitas fixas e
-            variáveis, além de despesas específicas, para calcular o saldo e o gasto mensal, utilizando da criação de
-            gráficos para que o usuário possa controlar suas despesas. O Finance é uma ferramenta essencial para o
-            controle de gastos, pois ajuda a organizar a vida financeira de quem o utiliza de forma clara e
-            transparente. Com base nas receitas e despesas inseridas, o Finance
-            calcula automaticamente o saldo e o gasto mensal, fornecendo ao usuário uma noção clara de status
-            financeiro. Isso permite que os utilizadores tenham uma compreensão mais precisa de suas finanças e tomem
-            decisões precisas sobre como gerenciar seu dinheiro. Por fim, o Finance é um passo importante para
-            modernizar a organização de tarefas financeiras, melhorando o desempenho do controle econômico dos
-            usuários que a utilizam. Além disso, essa aplicação é fácil de usar e pode ser acessada a partir de
-            qualquer dispositivo com acesso à internet.</p>
+    <div id="lembretes_page" class="main">
+      <div class="content">
+        <h1>Lembretes</h1>
+        <br>
+        <div class="lembretes-content">
+          <!-- <h3>Lembretes das despesas aqui</h3> -->
+
+          <div class="info-lembr">
+            <div class="lembr">
+              <label>Nome:</label>
+              <span>Água</span>
+            </div>
+
+            <div class="lembr">
+              <label>Valor:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Vencimento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Pagamento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Multa:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Juros:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Desconto:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Situação:</label>
+              <span id="vencida">Vencida</span>
+            </div>
+
+            <div class="button-lembr">
+              <button id="check_lembr" title="Confirmar pagamento">
+                <i class='bx bx-check'></i>
+              </button>
+              <button id="delete_lembr" title="Deletar lembrete">
+                <i class='bx bx-trash'></i>
+              </button>
+            </div>
+          </div>
+          <div class="info-lembr">
+            <div class="lembr">
+              <label>Nome:</label>
+              <span>Água</span>
+            </div>
+
+            <div class="lembr">
+              <label>Valor:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Vencimento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Pagamento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Multa:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Juros:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Desconto:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Situação:</label>
+              <span id="pago">Pago</span>
+            </div>
+
+            <div class="button-lembr">
+              <button id="check_lembr" title="Confirmar pagamento">
+                <i class='bx bx-check'></i>
+              </button>
+              <button id="delete_lembr" title="Deletar lembrete">
+                <i class='bx bx-trash'></i>
+              </button>
+            </div>
+          </div>
+          <div class="info-lembr">
+            <div class="lembr">
+              <label>Nome:</label>
+              <span>Água</span>
+            </div>
+
+            <div class="lembr">
+              <label>Valor:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Vencimento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Pagamento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Multa:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Juros:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Desconto:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Situação:</label>
+              <span id="pago">Pago</span>
+            </div>
+
+            <div class="button-lembr">
+              <button id="check_lembr" title="Confirmar pagamento">
+                <i class='bx bx-check'></i>
+              </button>
+              <button id="delete_lembr" title="Deletar lembrete">
+                <i class='bx bx-trash'></i>
+              </button>
+            </div>
+          </div>
+          <div class="info-lembr">
+            <div class="lembr">
+              <label>Nome:</label>
+              <span>Água</span>
+            </div>
+
+            <div class="lembr">
+              <label>Valor:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Vencimento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Pagamento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Multa:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Juros:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Desconto:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Situação:</label>
+              <span id="vencida">Vencida</span>
+            </div>
+
+            <div class="button-lembr">
+              <button id="check_lembr" title="Confirmar pagamento">
+                <i class='bx bx-check'></i>
+              </button>
+              <button id="delete_lembr" title="Deletar lembrete">
+                <i class='bx bx-trash'></i>
+              </button>
+            </div>
+          </div>
+          <div class="info-lembr">
+            <div class="lembr">
+              <label>Nome:</label>
+              <span>Água</span>
+            </div>
+
+            <div class="lembr">
+              <label>Valor:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Vencimento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Pagamento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Multa:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Juros:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Desconto:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Situação:</label>
+              <span id="pagar">Pagar</span>
+            </div>
+
+            <div class="button-lembr">
+              <button id="check_lembr" title="Confirmar pagamento">
+                <i class='bx bx-check'></i>
+              </button>
+              <button id="delete_lembr" title="Deletar lembrete">
+                <i class='bx bx-trash'></i>
+              </button>
+            </div>
+          </div>
+          <div class="info-lembr">
+            <div class="lembr">
+              <label>Nome:</label>
+              <span>Água</span>
+            </div>
+
+            <div class="lembr">
+              <label>Valor:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Vencimento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Pagamento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Multa:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Juros:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Desconto:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Situação:</label>
+              <span id="pago">Pago</span>
+            </div>
+
+            <div class="button-lembr">
+              <button id="check_lembr" title="Confirmar pagamento">
+                <i class='bx bx-check'></i>
+              </button>
+              <button id="delete_lembr" title="Deletar lembrete">
+                <i class='bx bx-trash'></i>
+              </button>
+            </div>
+          </div>
+          <div class="info-lembr">
+            <div class="lembr">
+              <label>Nome:</label>
+              <span>Água</span>
+            </div>
+
+            <div class="lembr">
+              <label>Valor:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Vencimento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Pagamento:</label>
+              <span>01/10/2024</span>
+            </div>
+
+            <div class="lembr">
+              <label>Multa:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Juros:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Desconto:</label>
+              <span>R$ 0.00</span>
+            </div>
+
+            <div class="lembr">
+              <label>Situação:</label>
+              <span id="pagar">Pagar</span>
+            </div>
+
+            <div class="button-lembr">
+              <button id="check_lembr" title="Confirmar pagamento">
+                <i class='bx bx-check'></i>
+              </button>
+              <button id="delete_lembr" title="Deletar lembrete">
+                <i class='bx bx-trash'></i>
+              </button>
+            </div>
+          </div>
+
         </div>
-        <div class="links-options">
-          <h3>Qual página você deseja consultar?</h3>
-          <div class="button-options">
-            <button id="home_option">
-              Início
-            </button>
-            <button id="receitas_option">
-              Receitas
-            </button>
-            <button id="lembretes_option">
-              Lembretes
-            </button>
-            <button id="desempenho_option">
-              Desempenho
-            </button>
-            <button id="perfil_option">
-              Perfil
-            </button>
+      </div>
+    </div>
+
+    <div id="desempenho_page" class="main">
+
+      <div class="content">
+
+        <h1>Desempenho</h1>
+
+        <br>
+
+        <div class="chart-info">
+
+          <div id="chart"></div>
+
+        </div>
+
+        <div class="saldo-info">
+
+          <h4>Informações dos saldos mensais</h4>
+
+          <div class="infos-desemp">
+            <h3>Mês: 01</h3>
+            <div class="receitas-desemp">
+              <p>Receita fixa: </p>
+              <span>R$ 0.00</span>
+            </div>
+            <div class="receitas-desemp">
+              <p>Receita extra: </p>
+              <span>R$ 0.00</span>
+            </div>
+            <div class="receitas-desemp">
+              <p>Total de despesas: </p>
+              <span>R$ 0.00</span>
+            </div>
+            <div class="receitas-desemp">
+              <p>Saldo: </p>
+              <span style="color: #0077fa;">R$ 0.00</span>
+            </div>
+          </div>
+          <div class="infos-desemp">
+            <h3>Mês: 02</h3>
+            <div class="receitas-desemp">
+              <p>Receita fixa: </p>
+              <span>R$ 0.00</span>
+            </div>
+            <div class="receitas-desemp">
+              <p>Receita extra: </p>
+              <span>R$ 0.00</span>
+            </div>
+            <div class="receitas-desemp">
+              <p>Total de despesas: </p>
+              <span>R$ 0.00</span>
+            </div>
+            <div class="receitas-desemp">
+              <p>Saldo: </p>
+              <span style="color: #0077fa;">R$ 0.00</span>
+            </div>
           </div>
         </div>
 
-        <div class="contato">
-          <h3>Caso você queira alguma informação que não foi citado nesta página, consulte nossa equipe através do
-            email.</h3>
-          <span>
-            <i class='bx bx-envelope'></i>
-            <p>tcc.finance6@gmail.com</p>
-          </span>
-        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="modal-option" id="inicio_opt">
-    <div class="modal-content-opt">
-      <div class="top-modal-option">
-        <h2>Início</h2>
-        <button id="close_inicio">
-          <i class='bx bx-x'></i>
-        </button>
-      </div>
-      <div class="modal-option-content">
-        <div class="image-option">
-          <img src="/assets/images/inicio-opt.png" alt="">
-        </div>
-        <div class="text-option">
-          <p>A tela inicial do Finance é a mais importante do sistema, aqui você irá cadastrar suas despesas e receber
-            os
-            valores das receitas. Preenchendo todos os campos solicitados e apertando o botão "Adicionar", as
-            informações
-            das despesas aparecerão logo abaixo. Em seguida, clique no botão "Calcular" e o saldo será exibido
-            instantaneamente nesta última seção.</p>
-          <span class="email">Qualquer outra dúvida nos notifique através do email: <span
-              style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <div class="modal-option" id="receitas_opt">
-    <div class="modal-content-opt">
-      <div class="top-modal-option">
-        <h2>Receitas</h2>
-        <button id="close_receitas">
-          <i class='bx bx-x'></i>
-        </button>
-      </div>
-      <div class="modal-option-content">
-        <div class="image-option">
-          <img src="/assets/images/receitas-opt.jpg" alt="">
-        </div>
-        <div class="text-option">
-          <p>A tela de receitas do Finance tem papel importante para o uso do website, aqui você irá cadastrar todas
-            as entratas, sendo fixas ou variáveis e tambem seu período de ganho (anual, mensal, semanal ou diário).
-            Preenchendo todos os campos necessários e clicando no botão "Adicionar", as informações das receitas
-            cadastradas aparecerão logo abaixo dos campos e os valores serão inseridos no topo da página inicial do
-            site.</p>
-          <span class="email">Qualquer outra dúvida nos notifique através do email: <span
-              style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div id="perfil_page" class="main">
+      <div class="content">
+        <h1>Perfil</h1>
+        <br>
+        <div class="perfil-content">
+          <div class="user-informations">
+            <p class="title-profile">Informações do usuário</p>
+            <div class="profile">
+              <div class="img">
+                <img src="/assets/images/user_avatar.png" alt="">
+              </div>
+              <div class="info-profile">
+                <h1>Nome de usuário</h2>
+                  <p>Nome completo</p>
+                  <p>email@email.com</p>
+                  <p>(99) 99999-9999</p>
 
-  <div class="modal-option" id="lembretes_opt">
-    <div class="modal-content-opt">
-      <div class="top-modal-option">
-        <h2>Lembretes</h2>
-        <button id="close_lembretes">
-          <i class='bx bx-x'></i>
-        </button>
-      </div>
-      <div class="modal-option-content">
-        <div class="image-option">
-          <img src="/assets/images/lembretes-opt.png" alt="">
-        </div>
-        <div class="text-option">
-          <p>A tela de lembretes do Finance irá ajudar muito no seu controle financeiro, pois todas as informações das
-            despesas cadastradas na tela inicial irão automaticamente para esta página. Você terá acesso à situação da
-            despesa (vencida, não paga e, caso tenha marcado a opção, paga).</p>
-          <span class="email">Qualquer outra dúvida nos notifique através do email: <span
-              style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
+                  <button id="edit_perfil">Editar perfil</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal-option" id="desempenho_opt">
-    <div class="modal-content-opt">
-      <div class="top-modal-option">
-        <h2>Desempenho</h2>
-        <button id="close_desempenho">
-          <i class='bx bx-x'></i>
-        </button>
-      </div>
-      <div class="modal-option-content">
-        <div class="image-option">
-          <img src="/assets/images/desempenho-opt.jpg" alt="">
-        </div>
-        <div class="text-option">
-          <p>A tela de desempenho do Finance irá ajudar muito no seu controle financeiro, pois os saldos mensais
-            durante o ano serão exibidos para poder controlar o seu desempenho de economia anual. Após o calculo do
-            saldo, as informações são direcionadas para essa página em forma de gráfico, além de informações
-            essenciais do mês que você cadastrou na tela inicial logo abaixo.</p>
-          <span class="email">Qualquer outra dúvida nos notifique através do email: <span
-              style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div id="options_page" class="main">
+      <div class="content">
+        <h1>Opções</h1>
+        <br>
+        <div class="options-content">
+          <div class="text">
+            <h3>Nesta página você poderá sanar algumas dúvidas!</h3>
+            <p><span>Sobe o website: </span>Essa ferramenta permite que os usuários registrem receitas fixas e
+              variáveis, além de despesas específicas, para calcular o saldo e o gasto mensal, utilizando da criação de
+              gráficos para que o usuário possa controlar suas despesas. O Finance é uma ferramenta essencial para o
+              controle de gastos, pois ajuda a organizar a vida financeira de quem o utiliza de forma clara e
+              transparente. Com base nas receitas e despesas inseridas, o Finance
+              calcula automaticamente o saldo e o gasto mensal, fornecendo ao usuário uma noção clara de status
+              financeiro. Isso permite que os utilizadores tenham uma compreensão mais precisa de suas finanças e tomem
+              decisões precisas sobre como gerenciar seu dinheiro. Por fim, o Finance é um passo importante para
+              modernizar a organização de tarefas financeiras, melhorando o desempenho do controle econômico dos
+              usuários que a utilizam. Além disso, essa aplicação é fácil de usar e pode ser acessada a partir de
+              qualquer dispositivo com acesso à internet.</p>
+          </div>
+          <div class="links-options">
+            <h3>Qual página você deseja consultar?</h3>
+            <div class="button-options">
+              <button id="home_option">
+                Início
+              </button>
+              <button id="receitas_option">
+                Receitas
+              </button>
+              <button id="lembretes_option">
+                Lembretes
+              </button>
+              <button id="desempenho_option">
+                Desempenho
+              </button>
+              <button id="perfil_option">
+                Perfil
+              </button>
+            </div>
+          </div>
 
-  <div class="modal-option" id="perfil_opt">
-    <div class="modal-content-opt">
-      <div class="top-modal-option">
-        <h2>Perfil</h2>
-        <button id="close_perfil_modal">
-          <i class='bx bx-x'></i>
-        </button>
-      </div>
-      <div class="modal-option-content">
-        <div class="image-option">
-          <img src="/assets/images/perfil-opt.jpg" alt="">
-        </div>
-        <div class="text-option">
-          <p>Esta tela é essencial para você poder acessar o website e personalizá-lo com suas informações e, clicando
-            no botão "Editar perfil", você pode alterar suas informações cadastradas na "Tela de cadastro" ao acessar
-            o site. Para editar após clicar no botão, basta preencher todas os campos e clicar em "Confirmar" para
-            salvar suas alterações mas, para reverter, clique em "Cancelar".</p>
-          <span class="email">Qualquer outra dúvida nos notifique através do email: <span
-              style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
+          <div class="contato">
+            <h3>Caso você queira alguma informação que não foi citado nesta página, consulte nossa equipe através do
+              email.</h3>
+            <span>
+              <i class='bx bx-envelope'></i>
+              <p>tcc.finance6@gmail.com</p>
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="modal-option" id="inicio_opt">
+      <div class="modal-content-opt">
+        <div class="top-modal-option">
+          <h2>Início</h2>
+          <button id="close_inicio">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+        <div class="modal-option-content">
+          <div class="image-option">
+            <img src="/assets/images/inicio-opt.png" alt="">
+          </div>
+          <div class="text-option">
+            <p>A tela inicial do Finance é a mais importante do sistema, aqui você irá cadastrar suas despesas e receber
+              os
+              valores das receitas. Preenchendo todos os campos solicitados e apertando o botão "Adicionar", as
+              informações
+              das despesas aparecerão logo abaixo. Em seguida, clique no botão "Calcular" e o saldo será exibido
+              instantaneamente nesta última seção.</p>
+            <span class="email">Qualquer outra dúvida nos notifique através do email: <span
+                style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-option" id="receitas_opt">
+      <div class="modal-content-opt">
+        <div class="top-modal-option">
+          <h2>Receitas</h2>
+          <button id="close_receitas">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+        <div class="modal-option-content">
+          <div class="image-option">
+            <img src="/assets/images/receitas-opt.jpg" alt="">
+          </div>
+          <div class="text-option">
+            <p>A tela de receitas do Finance tem papel importante para o uso do website, aqui você irá cadastrar todas
+              as entratas, sendo fixas ou variáveis e tambem seu período de ganho (anual, mensal, semanal ou diário).
+              Preenchendo todos os campos necessários e clicando no botão "Adicionar", as informações das receitas
+              cadastradas aparecerão logo abaixo dos campos e os valores serão inseridos no topo da página inicial do
+              site.</p>
+            <span class="email">Qualquer outra dúvida nos notifique através do email: <span
+                style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-option" id="lembretes_opt">
+      <div class="modal-content-opt">
+        <div class="top-modal-option">
+          <h2>Lembretes</h2>
+          <button id="close_lembretes">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+        <div class="modal-option-content">
+          <div class="image-option">
+            <img src="/assets/images/lembretes-opt.png" alt="">
+          </div>
+          <div class="text-option">
+            <p>A tela de lembretes do Finance irá ajudar muito no seu controle financeiro, pois todas as informações das
+              despesas cadastradas na tela inicial irão automaticamente para esta página. Você terá acesso à situação da
+              despesa (vencida, não paga e, caso tenha marcado a opção, paga).</p>
+            <span class="email">Qualquer outra dúvida nos notifique através do email: <span
+                style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-option" id="desempenho_opt">
+      <div class="modal-content-opt">
+        <div class="top-modal-option">
+          <h2>Desempenho</h2>
+          <button id="close_desempenho">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+        <div class="modal-option-content">
+          <div class="image-option">
+            <img src="/assets/images/desempenho-opt.jpg" alt="">
+          </div>
+          <div class="text-option">
+            <p>A tela de desempenho do Finance irá ajudar muito no seu controle financeiro, pois os saldos mensais
+              durante o ano serão exibidos para poder controlar o seu desempenho de economia anual. Após o calculo do
+              saldo, as informações são direcionadas para essa página em forma de gráfico, além de informações
+              essenciais do mês que você cadastrou na tela inicial logo abaixo.</p>
+            <span class="email">Qualquer outra dúvida nos notifique através do email: <span
+                style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-option" id="perfil_opt">
+      <div class="modal-content-opt">
+        <div class="top-modal-option">
+          <h2>Perfil</h2>
+          <button id="close_perfil_modal">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+        <div class="modal-option-content">
+          <div class="image-option">
+            <img src="/assets/images/perfil-opt.jpg" alt="">
+          </div>
+          <div class="text-option">
+            <p>Esta tela é essencial para você poder acessar o website e personalizá-lo com suas informações e, clicando
+              no botão "Editar perfil", você pode alterar suas informações cadastradas na "Tela de cadastro" ao acessar
+              o site. Para editar após clicar no botão, basta preencher todas os campos e clicar em "Confirmar" para
+              salvar suas alterações mas, para reverter, clique em "Cancelar".</p>
+            <span class="email">Qualquer outra dúvida nos notifique através do email: <span
+                style="color: #0077fa; font-weight: 600; user-select: all;">tcc.finance6@gmail.com</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
