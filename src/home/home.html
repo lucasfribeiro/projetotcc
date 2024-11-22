@@ -156,50 +156,50 @@
           <h2>Despesas</h2>
           <p>Preencha todos os campos obrigatórios para cadastrar cada <span style="font-weight: 600;">despesa</span>
           </p>
-          <div class="input-area-desp">
+          <form class="input-area-desp">
             <div class="input-content-desp">
               <label>Nome <span style="color: #de212e;">*</span></label>
-              <input type="text" placeholder="Ex.: Água" required>
+              <input type="text" id="nome" placeholder="Ex.: Água" required>
             </div>
             <div class="input-content-desp">
               <label>Valor <span style="color: #de212e;">*</span></label>
-              <input type="text" placeholder="0.00" required>
+              <input type="text" placeholder="0.00" id="valor" required>
             </div>
 
             <div class="input-content-desp">
               <label>Vencimento <span style="color: #de212e;">*</span></label>
-              <input type="date" required>
+              <input type="date" id="venci" required>
             </div>
 
             <div class="input-content-desp">
               <label>Pagamento <span style="color: #de212e;">*</span></label>
-              <input type="date" required>
+              <input type="date" id="pag" required>
             </div>
 
             <div class="input-content-desp">
               <label>Multa</label>
-              <input type="number" placeholder="0.00">
+              <input type="number" id="multa" placeholder="0.00">
             </div>
 
             <div class="input-content-desp">
               <label>Juros</label>
-              <input type="number" placeholder="0.00">
+              <input type="number" id="juros" placeholder="0.00">
             </div>
 
             <div class="input-content-desp">
               <label>Desconto</label>
-              <input type="number" placeholder="0.00">
+              <input type="number" id="desconto" placeholder="0.00">
             </div>
 
-            <button id="add_desp">
+            <button id="add_desp" type="submit">
               Adicionar
             </button>
 
-          </div>
+          </form>
 
           <div class="info-desp">
-            <!-- <h3>Informações das despesas aqui</h3> -->
-            <div class="info-content">
+            <h3>Informações das despesas aqui</h3>
+            <!-- <div class="info-content">
 
               <div class="desp">
                 <label>Nome:</label>
@@ -245,7 +245,7 @@
                 </button>
               </div>
 
-            </div>
+            </div> -->
 
           </div>
 

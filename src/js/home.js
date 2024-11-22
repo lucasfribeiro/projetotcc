@@ -266,3 +266,137 @@ perfilOptBtn.addEventListener("click", () => {
 closeperfilOpt.addEventListener("click", () => {
   perfilOpt.style.display = "none"
 })
+
+// Despesas
+
+let despesa = []
+
+document.querySelector('.input-area-desp').addEventListener('submit', addDespesas);
+
+function addDespesas(e){
+  e.preventDefault();
+
+  const dataVencimento = document.getElementById('venci').value;
+  
+  const [anoV, mesV, diaV] = dataVencimento.split('-');
+  const formatoVencimento = `${diaV}/${mesV}/${anoV}`
+  
+  const dataPagamento = document.getElementById('pag').value;
+  
+  const [anoP, mesP, diaP] = dataPagamento.split('-');
+  const formatoPagamento = `${diaP}/${mesP}/${anoP}`
+
+  const nomeDesp = document.getElementById('nome').value;
+  const valorDesp = parseFloat(document.getElementById('valor').value);
+  const multaDesp = parseFloat(document.getElementById('multa').value);
+  const descDesp = parseFloat(document.getElementById('desconto').value);
+  const jurosDesp = parseFloat(document.getElementById('juros').value);
+
+  const totalDesp = valorDesp + multaDesp - descDesp + jurosDesp
+
+  const despesas ={
+      id: Date.now(),
+      nome: nomeDesp,
+      valor: valorDesp,
+      vencimento: formatoVencimento,
+      pagamento: formatoPagamento,
+      multa: multaDesp,
+      desconto: descDesp,
+      juros: jurosDesp,
+      total: totalDesp
+  }
+
+  despesa.push(despesas)
+  document.querySelector('.input-area-desp').reset();
+  listarDespesa()
+  calcTotal()
+  // console.log(despesas)
+  
+}
+
+function listarDespesa(){
+
+  const listaDesp = document.querySelector('.info-desp');
+  listaDesp.innerHTML = ''
+
+  despesa.forEach(despesas => {
+      const row = document.createElement('div');
+
+      row.innerHTML = `
+      <div class="info-content">
+
+              <div class="desp">
+                <label>Nome:</label>
+                <span>${despesas.nome}</span>
+              </div>
+
+              <div class="desp">
+                <label>Valor:</label>
+                <span>R$ ${despesas.valor.toFixed(2)}</span>
+              </div>
+
+              <div class="desp">
+                <label>Vencimento:</label>
+                <span>${despesas.vencimento}</span>
+              </div>
+
+              <div class="desp">
+                <label>Pagamento:</label>
+                <span>${despesas.pagamento}</span>
+              </div>
+
+              <div class="desp">
+                <label>Multa:</label>
+                <span>R$ ${despesas.multa.toFixed(2)}</span>
+              </div>
+
+              <div class="desp">
+                <label>Juros:</label>
+                <span>R$ ${despesas.juros.toFixed(2)}</span>
+              </div>
+
+              <div class="desp">
+                <label>Desconto:</label>
+                <span>R$ ${despesas.desconto.toFixed(2)}</span>
+              </div>
+
+              <div class="buttons-desp">
+                <button id="delete_desp" title="Excluir" onClick="apagarDespesa(${despesas.id})">
+                  <i class='bx bx-trash'></i>
+                </button>
+                <button id="edit_desp" title="Editar" onClick="editarDespesa(${despesas.id})">
+                  <i class='bx bx-pencil'></i>
+                </button>
+              </div>
+
+            </div>
+      `;
+
+      listaDesp.appendChild(row)
+  })
+}
+
+function calcTotal(){
+  const totalDesp = despesa.reduce((total, despesas) => total + despesas.total, 0);
+  document.getElementById('total_desp').innerText = totalDesp.toFixed(2);
+}
+
+function apagarDespesa(id){
+  despesa = despesa.filter(despesas => despesas.id !== id);
+  listarDespesa();
+  calcTotal();
+}
+
+function editarDespesa(id){
+  const despesas = despesa.find(despesas => despesas.id == id);
+
+  document.getElementById('nome').value = despesas.nome;
+  document.getElementById('valor').value = despesas.valor;
+  document.getElementById('venci').value = despesas.vencimento;
+  document.getElementById('pag').value = despesas.pagamento;
+  document.getElementById('multa').value = despesas.multa;
+  document.getElementById('desconto').value = despesas.desconto;
+  document.getElementById('juros').value = despesas.juros;
+  
+  apagarDespesa(id)
+}
