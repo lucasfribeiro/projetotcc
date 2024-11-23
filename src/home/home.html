@@ -269,7 +269,7 @@
         <h1>Receitas</h1>
         <br>
         <div class="cad-receitas">
-          <div class="receita-form">
+          <form class="receita-form" id="form_fixa">
             <h2>Receitas fixas</h2>
             <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas fixas</span>.</p>
             <div class="input-area-receitas">
@@ -280,16 +280,16 @@
               <div class="inputs">
                 <label>Descrição</label>
                 <select id="select_fixa" required>
-                  <option value="year">Anual</option>
-                  <option value="mouth">Mensal</option>
-                  <option value="week">Semanal</option>
-                  <option value="day">Diário</option>
+                  <option value="Anual">Anual</option>
+                  <option value="Mensal">Mensal</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Diário">Diário</option>
                 </select>
               </div>
-              <button id="add_receitas">Adicionar</button>
+              <button id="add_receitas" type="submit">Adicionar</button>
             </div>
-          </div>
-          <div class="receita-form">
+          </form>
+          <form class="receita-form" id="form_extra">
             <h2>Receitas extras</h2>
             <p>Preencha os campos necesários para cadastrar <span style="font-weight: 600;">receitas extras</span>.</p>
             <div class="input-area-receitas">
@@ -306,9 +306,9 @@
                   <option value="day">Diário</option>
                 </select>
               </div>
-              <button id="add_receitas_extra">Adicionar</button>
+              <button id="add_receitas_extra" type="submit">Adicionar</button>
             </div>
-          </div>
+          </form>
         </div>
 
         <div class="results-receitas">

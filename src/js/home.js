@@ -15,11 +15,11 @@ const closeSidebar = document.getElementById('close_sidebar');
 const sidebar = document.getElementById("sidebar")
 
 openSidebar.addEventListener("click", () => {
-    sidebar.style.display = "block"
+  sidebar.style.display = "block"
 })
 
 closeSidebar.addEventListener("click", () => {
-    sidebar.style.display = "none"
+  sidebar.style.display = "none"
 })
 
 // Transição de telas
@@ -31,124 +31,124 @@ const Perfil = document.getElementById('perfil_page');
 const Desempenho = document.getElementById('desempenho_page');
 const Options = document.getElementById('options_page');
 
-const homeBtn = document.getElementById('home'); 
-const receitasBtn = document.getElementById('receitas'); 
-const lembretesBtn = document.getElementById('lembretes'); 
-const perfilBtn = document.getElementById('perfil'); 
-const desempenhoBtn = document.getElementById('desempenho'); 
-const optionsBtn = document.getElementById('options'); 
+const homeBtn = document.getElementById('home');
+const receitasBtn = document.getElementById('receitas');
+const lembretesBtn = document.getElementById('lembretes');
+const perfilBtn = document.getElementById('perfil');
+const desempenhoBtn = document.getElementById('desempenho');
+const optionsBtn = document.getElementById('options');
 
 homeBtn.addEventListener("click", () => {
 
-    homeBtn.classList.add("active");
+  homeBtn.classList.add("active");
 
-    receitasBtn.classList.remove("active");
-    lembretesBtn.classList.remove("active");
-    perfilBtn.classList.remove("active");
-    desempenhoBtn.classList.remove("active");
-    optionsBtn.classList.remove("active");
+  receitasBtn.classList.remove("active");
+  lembretesBtn.classList.remove("active");
+  perfilBtn.classList.remove("active");
+  desempenhoBtn.classList.remove("active");
+  optionsBtn.classList.remove("active");
 
-    Home.style.display = "block";
+  Home.style.display = "block";
 
-    Receitas.style.display = "none";
-    Lembretes.style.display = "none";
-    Perfil.style.display = "none";
-    Desempenho.style.display = "none";
-    Options.style.display = "none";
+  Receitas.style.display = "none";
+  Lembretes.style.display = "none";
+  Perfil.style.display = "none";
+  Desempenho.style.display = "none";
+  Options.style.display = "none";
 })
 
 receitasBtn.addEventListener("click", () => {
 
-    receitasBtn.classList.add("active");
+  receitasBtn.classList.add("active");
 
-    homeBtn.classList.remove("active");
-    lembretesBtn.classList.remove("active");
-    perfilBtn.classList.remove("active");
-    desempenhoBtn.classList.remove("active");
-    optionsBtn.classList.remove("active");
+  homeBtn.classList.remove("active");
+  lembretesBtn.classList.remove("active");
+  perfilBtn.classList.remove("active");
+  desempenhoBtn.classList.remove("active");
+  optionsBtn.classList.remove("active");
 
-    Receitas.style.display = "block";
+  Receitas.style.display = "block";
 
-    Home.style.display = "none";
-    Lembretes.style.display = "none";
-    Perfil.style.display = "none";
-    Desempenho.style.display = "none";
-    Options.style.display = "none";
+  Home.style.display = "none";
+  Lembretes.style.display = "none";
+  Perfil.style.display = "none";
+  Desempenho.style.display = "none";
+  Options.style.display = "none";
 })
 
 lembretesBtn.addEventListener("click", () => {
 
-    lembretesBtn.classList.add("active");
+  lembretesBtn.classList.add("active");
 
-    homeBtn.classList.remove("active");
-    receitasBtn.classList.remove("active");
-    perfilBtn.classList.remove("active");
-    desempenhoBtn.classList.remove("active");
-    optionsBtn.classList.remove("active");
+  homeBtn.classList.remove("active");
+  receitasBtn.classList.remove("active");
+  perfilBtn.classList.remove("active");
+  desempenhoBtn.classList.remove("active");
+  optionsBtn.classList.remove("active");
 
-    Lembretes.style.display = "block";
+  Lembretes.style.display = "block";
 
-    Home.style.display = "none";
-    Receitas.style.display = "none";
-    Perfil.style.display = "none";
-    Desempenho.style.display = "none";
-    Options.style.display = "none";
+  Home.style.display = "none";
+  Receitas.style.display = "none";
+  Perfil.style.display = "none";
+  Desempenho.style.display = "none";
+  Options.style.display = "none";
 })
 
 perfilBtn.addEventListener("click", () => {
 
-    perfilBtn.classList.add("active");
+  perfilBtn.classList.add("active");
 
-    homeBtn.classList.remove("active");
-    receitasBtn.classList.remove("active");
-    lembretesBtn.classList.remove("active");
-    desempenhoBtn.classList.remove("active");
-    optionsBtn.classList.remove("active");
+  homeBtn.classList.remove("active");
+  receitasBtn.classList.remove("active");
+  lembretesBtn.classList.remove("active");
+  desempenhoBtn.classList.remove("active");
+  optionsBtn.classList.remove("active");
 
-    Perfil.style.display = "block";
+  Perfil.style.display = "block";
 
-    Home.style.display = "none";
-    Receitas.style.display = "none";
-    Lembretes.style.display = "none";
-    Desempenho.style.display = "none";
-    Options.style.display = "none";
+  Home.style.display = "none";
+  Receitas.style.display = "none";
+  Lembretes.style.display = "none";
+  Desempenho.style.display = "none";
+  Options.style.display = "none";
 })
 
 desempenhoBtn.addEventListener("click", () => {
 
-     desempenhoBtn.classList.add("active")
+  desempenhoBtn.classList.add("active")
 
-     homeBtn.classList.remove("active");
-     receitasBtn.classList.remove("active");
-     perfilBtn.classList.remove("active");
-     lembretesBtn.classList.remove("active");
-     optionsBtn.classList.remove("active");
+  homeBtn.classList.remove("active");
+  receitasBtn.classList.remove("active");
+  perfilBtn.classList.remove("active");
+  lembretesBtn.classList.remove("active");
+  optionsBtn.classList.remove("active");
 
-    Desempenho.style.display = "block";
+  Desempenho.style.display = "block";
 
-    Home.style.display = "none";
-    Receitas.style.display = "none";
-    Lembretes.style.display = "none";
-    Perfil.style.display = "none";
-    Options.style.display = "none";
+  Home.style.display = "none";
+  Receitas.style.display = "none";
+  Lembretes.style.display = "none";
+  Perfil.style.display = "none";
+  Options.style.display = "none";
 })
 
 optionsBtn.addEventListener("click", () => {
 
-     optionsBtn.classList.add("active")
-     homeBtn.classList.remove("active");
-     receitasBtn.classList.remove("active");
-     perfilBtn.classList.remove("active");
-     lembretesBtn.classList.remove("active");
-     desempenhoBtn.classList.remove("active");
+  optionsBtn.classList.add("active")
+  homeBtn.classList.remove("active");
+  receitasBtn.classList.remove("active");
+  perfilBtn.classList.remove("active");
+  lembretesBtn.classList.remove("active");
+  desempenhoBtn.classList.remove("active");
 
-     Options.style.display = "block";
+  Options.style.display = "block";
 
-    Home.style.display = "none";
-    Receitas.style.display = "none";
-    Lembretes.style.display = "none";
-    Perfil.style.display = "none";
-    Desempenho.style.display = "none";
+  Home.style.display = "none";
+  Receitas.style.display = "none";
+  Lembretes.style.display = "none";
+  Perfil.style.display = "none";
+  Desempenho.style.display = "none";
 })
 
 // Modal perfil 
@@ -173,33 +173,33 @@ var options = {
   series: [{
     name: "Valor",
     data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 200, 120, 46]
-}],
+  }],
   chart: {
-  height: 350,
-  type: 'line',
-  zoom: {
-    enabled: false
-  }
-},
-dataLabels: {
-  enabled: false
-},
-stroke: {
-  curve: 'straight'
-},
-title: {
-  text: 'Saldos por mês',
-  align: 'left'
-},
-grid: {
-  row: {
-    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-    opacity: 0.5
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    }
   },
-},
-xaxis: {
-  categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-}
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'straight'
+  },
+  title: {
+    text: 'Saldos por mês',
+    align: 'left'
+  },
+  grid: {
+    row: {
+      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+      opacity: 0.5
+    },
+  },
+  xaxis: {
+    categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+  }
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
@@ -273,16 +273,18 @@ let despesa = []
 
 document.querySelector('.input-area-desp').addEventListener('submit', addDespesas);
 
-function addDespesas(e){
+function addDespesas(e) {
   e.preventDefault();
 
+  // alterar datas
+
   const dataVencimento = document.getElementById('venci').value;
-  
+
   const [anoV, mesV, diaV] = dataVencimento.split('-');
   const formatoVencimento = `${diaV}/${mesV}/${anoV}`
-  
+
   const dataPagamento = document.getElementById('pag').value;
-  
+
   const [anoP, mesP, diaP] = dataPagamento.split('-');
   const formatoPagamento = `${diaP}/${mesP}/${anoP}`
 
@@ -294,16 +296,16 @@ function addDespesas(e){
 
   const totalDesp = valorDesp + multaDesp - descDesp + jurosDesp
 
-  const despesas ={
-      id: Date.now(),
-      nome: nomeDesp,
-      valor: valorDesp,
-      vencimento: formatoVencimento,
-      pagamento: formatoPagamento,
-      multa: multaDesp,
-      desconto: descDesp,
-      juros: jurosDesp,
-      total: totalDesp
+  const despesas = {
+    id: Date.now(),
+    nome: nomeDesp,
+    valor: valorDesp,
+    vencimento: formatoVencimento,
+    pagamento: formatoPagamento,
+    multa: multaDesp,
+    desconto: descDesp,
+    juros: jurosDesp,
+    total: totalDesp
   }
 
   despesa.push(despesas)
@@ -311,18 +313,18 @@ function addDespesas(e){
   listarDespesa()
   calcTotal()
   // console.log(despesas)
-  
+
 }
 
-function listarDespesa(){
+function listarDespesa() {
 
   const listaDesp = document.querySelector('.info-desp');
   listaDesp.innerHTML = ''
 
   despesa.forEach(despesas => {
-      const row = document.createElement('div');
+    const row = document.createElement('div');
 
-      row.innerHTML = `
+    row.innerHTML = `
       <div class="info-content">
 
               <div class="desp">
@@ -372,22 +374,22 @@ function listarDespesa(){
             </div>
       `;
 
-      listaDesp.appendChild(row)
+    listaDesp.appendChild(row)
   })
 }
 
-function calcTotal(){
+function calcTotal() {
   const totalDesp = despesa.reduce((total, despesas) => total + despesas.total, 0);
   document.getElementById('total_desp').innerText = totalDesp.toFixed(2);
 }
 
-function apagarDespesa(id){
+function apagarDespesa(id) {
   despesa = despesa.filter(despesas => despesas.id !== id);
   listarDespesa();
   calcTotal();
 }
 
-function editarDespesa(id){
+function editarDespesa(id) {
   const despesas = despesa.find(despesas => despesas.id == id);
 
   document.getElementById('nome').value = despesas.nome;
@@ -397,6 +399,29 @@ function editarDespesa(id){
   document.getElementById('multa').value = despesas.multa;
   document.getElementById('desconto').value = despesas.desconto;
   document.getElementById('juros').value = despesas.juros;
-  
+
   apagarDespesa(id)
+}
+
+// Receitas
+
+let receitaFixa = []
+
+document.getElementById('form_fixa').addEventListener('submit', addFixa);
+
+function addFixa(event){
+  event.preventDefault();
+
+  const valorFixa = document.getElementById('value_fixa').value;
+  const selectFixa = document.getElementById('select_fixa').value;
+
+   const fixa = {
+     id: Date.now(),
+     valor: valorFixa,
+     descricao: selectFixa
+   }
+
+  //  console.log(fixa)
+   receitaFixa.push(fixa)
+   document.getElementById("form_fixa").reset();
 }
