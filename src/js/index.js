@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault(); // Evita o envio padrão do formulário
       
       // Obter os valores dos campos
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const password = document.getElementById("password").value;
+      const usu_email = document.getElementById("email").value;
+      const usu_fone = document.getElementById("phone").value;
+      const usu_senha = document.getElementById("password").value;
       
       // Montar o objeto com os dados do formulário
       const formData = {
-        email,
-        phone,
-        password,
+        usu_email,
+        usu_fone,
+        usu_senha,
       };
       
       try {
