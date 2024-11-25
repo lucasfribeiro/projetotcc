@@ -2,8 +2,10 @@ const fone = document.getElementById("phone").value;
 const email = document.getElementById("email").value;
 const password = document.getElementById("password").value;
 
-async function login(fone, email, password) {
-    try {
+async function login() {
+    
+  
+  try {
       const response = await fetch('http://localhost:3333/login', {
         method: 'POST',
         headers: {
