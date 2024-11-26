@@ -425,3 +425,78 @@ function addFixa(event){
    receitaFixa.push(fixa)
    document.getElementById("form_fixa").reset();
 }
+
+
+
+
+
+
+
+
+document.getElementById("submit").addEventListener("click", async (event) => {
+  event.preventDefault(); // Impede o comportamento padrão do botão
+
+  // Captura os dados dos campos do formulário
+  const rec_descricao = document.getElementById("select_extra").value.trim();
+  const rec_data_receber = document.getElementById("").value.trim();
+  const rec_valor = document.getElementById("value_fixa").value.trim();
+
+  // Valida se todos os campos foram preenchidos
+  if (!rec_descricao || !rec_data_receber || !rec_valor ) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+  }
+
+  // Cria o payload para enviar à API
+  const usuario = {
+    rec_descricao,
+    rec_data_receber,
+    rec_valor,
+  };
+
+  try {
+      // Faz a requisição para a API local
+      const response = await fetch("http://localhost:3333/receitas", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(usuario),
+      });
+
+      // Verifica a resposta da API
+      if (response.ok) {
+          const data = await response.json();
+
+
+          
+          Toastify({
+            text: "Cadastro realizado com sucesso!",
+            duration: 800,
+            close: false,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#0bbe50",
+            },
+          }).showToast();
+
+
+          console.log("Usuário cadastrado:", data);
+          // Limpa o formulário após o cadastro bem-sucedido
+          document.getElementById("select_extra").value = "";
+          document.getElementById("").value = "";
+          document.getElementById("value_fixa").value = "";
+
+      } else {
+          const errorData = await response.json();
+          alert(`Erro ao cadastrar: ${errorData.message || "Erro desconhecido"}`);
+      }
+  } catch (error) {
+      console.error("Erro ao realizar a requisição:", error);
+      alert("Erro ao conectar-se à API. Verifique sua conexão.");
+  }
+});
+
+
