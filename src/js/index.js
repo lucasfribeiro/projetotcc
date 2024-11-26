@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form");
     
@@ -37,10 +36,36 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Sucesso:", result);
   
         // Exibir uma mensagem de sucesso ou redirecionar
-        alert("Login realizado com sucesso!");
+        
+        Toastify({
+          text: "Login realizado com sucesso!",
+          duration: 800,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#0bbe50",
+          },
+        }).showToast();
+
+        setTimeout(() => {
+          window.location.href = "./src/home/home.html"; // Caminho para a página desejada
+        }, 800);
+
       } catch (error) {
         console.error("Erro ao realizar login:", error);
-        alert("Falha ao realizar login. Tente novamente.");
+        Toastify({
+          text: "Falha ao realizar o Login. Tente novamente.",
+          duration: 1000,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#de212e",
+          },
+        }).showToast();
       }
     });
   });
