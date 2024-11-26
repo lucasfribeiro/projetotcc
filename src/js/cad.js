@@ -1,52 +1,55 @@
-const form = document.getElementById('form');
-const message = document.getElementById('message');
-const login = document.querySelector("#login");
+document.getElementById("submit").addEventListener("click", async (event) => {
+  event.preventDefault(); // Impede o comportamento padrão do botão
 
+  // Captura os dados dos campos do formulário
+  const usu_login = document.getElementById("apelido").value.trim();
+  const usu_nome = document.getElementById("nome").value.trim();
+  const usu_email = document.getElementById("email").value.trim();
+  const usu_fone = document.getElementById("tel").value.trim();
+  const usu_senha = document.getElementById("senha").value.trim();
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    message.classList.add('show-flex')
-    login.classList.add('show-block')
-})
+  // Valida se todos os campos foram preenchidos
+  if (!usu_login || !usu_nome || !usu_email || !usu_fone || !usu_senha) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+  }
 
-
-// Adicionando um evento para o envio do formulário
-form.addEventListener('submit', async (event) => {
-  event.preventDefault(); // Previne o recarregamento da página
-
-  // Capturando os valores do formulário
-  const usu_login = document.getElementById('apelido').value;
-  const usu_nome = form.querySelector('nome"').value;
-  const usu_email = form.querySelector('email').value;
-  const usu_telefone = form.querySelector('tel').value;
-  const usu_senha = form.querySelector('senha').value;
-
-  // Criando o objeto com os dados do formulário
-  const userData = { usu_login, usu_nome, usu_email, usu_telefone, usu_senha };
+  // Cria o payload para enviar à API
+  const usuario = {
+      usu_login,
+      usu_nome,
+      usu_email,
+      usu_fone,
+      usu_senha,
+  };
 
   try {
-    // Enviando os dados para a API local usando fetch
-    const response = await fetch('http://localhost:3333/usuarios', {
-      method: 'POST', // Método HTTP
-      headers: {
-        'Content-Type': 'application/json', // Informando o tipo de dado enviado
-      },
-      body: JSON.stringify(userData), // Convertendo o objeto para JSON
-    });
+      // Faz a requisição para a API local
+      const response = await fetch("http://localhost:3333/usuario", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(usuario),
+      });
 
-    // Tratando a resposta
-    if (response.ok) {
-      const data = await response.json();
-      document.getElementById('message').innerHTML = 
-        `<p>Cadastro realizado com sucesso! Bem-vindo, ${data.nome}. Faça login <a href="/index.html">aqui</a>.</p>`;
-    } else {
-      const error = await response.json();
-      document.getElementById('message').innerHTML = 
-        `<p>Erro ao cadastrar: ${error.message}</p>`;
-    }
+      // Verifica a resposta da API
+      if (response.ok) {
+          const data = await response.json();
+          alert("Usuário cadastrado com sucesso!");
+          console.log("Usuário cadastrado:", data);
+          // Limpa o formulário após o cadastro bem-sucedido
+          document.getElementById("apelido").value = "";
+          document.getElementById("nome").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("tel").value = "";
+          document.getElementById("senha").value = "";
+      } else {
+          const errorData = await response.json();
+          alert(`Erro ao cadastrar: ${errorData.message || "Erro desconhecido"}`);
+      }
   } catch (error) {
-    console.error('Erro ao se comunicar com a API:', error);
-    document.getElementById('message').innerHTML = 
-      `<p>Erro ao se comunicar com o servidor. Tente novamente mais tarde.</p>`;
+      console.error("Erro ao realizar a requisição:", error);
+      alert("Erro ao conectar-se à API. Verifique sua conexão.");
   }
 });
