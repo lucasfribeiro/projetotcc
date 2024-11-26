@@ -21,6 +21,7 @@ document.getElementById("submit").addEventListener("click", async (event) => {
       usu_email,
       usu_fone,
       usu_senha,
+
   };
 
   try {
@@ -38,7 +39,7 @@ document.getElementById("submit").addEventListener("click", async (event) => {
           const data = await response.json();
 
 
-          
+
           Toastify({
             text: "Cadastro realizado com sucesso!",
             duration: 800,
