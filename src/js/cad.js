@@ -38,8 +38,9 @@ document.getElementById("submit").addEventListener("click", async (event) => {
           const data = await response.json();
 
           Toastify({
-            text: "Cadastrado com sucesso!",
+            text: "Cadastro realizado com sucesso!",
             duration: 800,
+            close: false,
             gravity: "top", // `top` or `bottom`
             position: "center", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
@@ -49,7 +50,7 @@ document.getElementById("submit").addEventListener("click", async (event) => {
           }).showToast();
 
           setTimeout(() => {
-            window.location.href = "./index.html"; // Caminho para a página desejada
+            window.location.href = "/index.html"; // Caminho para a página desejada
           }, 800);
 
           console.log("Usuário cadastrado:", data);
