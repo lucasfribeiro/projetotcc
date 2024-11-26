@@ -36,7 +36,22 @@ document.getElementById("submit").addEventListener("click", async (event) => {
       // Verifica a resposta da API
       if (response.ok) {
           const data = await response.json();
-          alert("Usuário cadastrado com sucesso!");
+
+          Toastify({
+            text: "Cadastrado com sucesso!",
+            duration: 800,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#0bbe50",
+            },
+          }).showToast();
+
+          setTimeout(() => {
+            window.location.href = "./index.html"; // Caminho para a página desejada
+          }, 800);
+
           console.log("Usuário cadastrado:", data);
           // Limpa o formulário após o cadastro bem-sucedido
           document.getElementById("apelido").value = "";
