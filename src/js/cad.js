@@ -37,6 +37,8 @@ document.getElementById("submit").addEventListener("click", async (event) => {
       if (response.ok) {
           const data = await response.json();
 
+
+          
           Toastify({
             text: "Cadastro realizado com sucesso!",
             duration: 800,
@@ -69,3 +71,5 @@ document.getElementById("submit").addEventListener("click", async (event) => {
       alert("Erro ao conectar-se à API. Verifique sua conexão.");
   }
 });
+
+
