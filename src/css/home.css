@@ -639,6 +639,14 @@
     justify-content: space-between;
 }
 
+.total-receitas{
+    background: var(--color-white);
+    padding: 1.3rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-border);
+}
+
 .spans-rec{
     display: flex;
     gap: 1rem;

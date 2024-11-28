@@ -278,6 +278,10 @@
                 <input type="number" id="value_fixa" placeholder="R$ 0.00" required>
               </div>
               <div class="inputs">
+                <label>Data de recebimento</label>
+                <input type="date" id="recebimento_fixa" required>
+              </div>
+              <div class="inputs">
                 <label>Descrição</label>
                 <select id="select_fixa" required>
                   <option value="Anual">Anual</option>
@@ -286,7 +290,7 @@
                   <option value="Diário">Diário</option>
                 </select>
               </div>
-              <button id="add_receitas" type="submit">Adicionar</button>
+              <button id="add_receitas">Adicionar</button>
             </div>
           </form>
           <form class="receita-form" id="form_extra">
@@ -298,6 +302,10 @@
                 <input type="number" id="value_extra" placeholder="R$ 0.00" required>
               </div>
               <div class="inputs">
+                <label>Data de recebimento</label>
+                <input type="date" id="recebimento_extra" required>
+              </div>
+              <div class="inputs">
                 <label>Descrição</label>
                 <select id="select_extra" required>
                   <option value="year">Anual</option>
@@ -306,7 +314,7 @@
                   <option value="day">Diário</option>
                 </select>
               </div>
-              <button id="add_receitas_extra" type="submit">Adicionar</button>
+              <button id="add_receitas extra" type="submit">Adicionar</button>
             </div>
           </form>
         </div>
@@ -375,7 +383,11 @@
 
           </div>
         </div>
+        <div class="total-receitas">
+          <h2>Total: R$ <span id="total_receitas">0.00</span></h2>
+        </div>
       </div>
+
     </div>
 
     <div id="lembretes_page" class="main">
@@ -815,11 +827,11 @@
               </div>
               <div class="info-profile">
                 <h2>Lucas</h2>
-                  <p>Lucas</p>
-                  <p>lucas@email.com</p>
-                  <p>(14) 99886-4300</p>
+                <p>Lucas</p>
+                <p>lucas@email.com</p>
+                <p>(14) 99886-4300</p>
 
-                  <button id="edit_perfil">Editar perfil</button>
+                <button id="edit_perfil">Editar perfil</button>
               </div>
             </div>
           </div>

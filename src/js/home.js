@@ -271,10 +271,6 @@ closeperfilOpt.addEventListener("click", () => {
 
 // Listar informações no perfil
 
-
-
-<<<<<<< HEAD
-=======
 function addDespesas(e) {
   e.preventDefault();
 
@@ -407,53 +403,25 @@ function editarDespesa(id) {
 
 // Receitas
 
-let receitaFixa = []
-
-document.getElementById('form_fixa').addEventListener('submit', addFixa);
-
-function addFixa(event){
-  event.preventDefault();
-
-  const valorFixa = document.getElementById('value_fixa').value;
-  const selectFixa = document.getElementById('select_fixa').value;
-
-   const fixa = {
-     id: Date.now(),
-     valor: valorFixa,
-     descricao: selectFixa
-   }
-
-  //  console.log(fixa)
-   receitaFixa.push(fixa)
-   document.getElementById("form_fixa").reset();
-}
-
-
-
-
-
-
-
-
-document.getElementById("submit").addEventListener("click", async (event) => {
+document.getElementById("add_receitas").addEventListener("click", async (event) => {
   event.preventDefault(); // Impede o comportamento padrão do botão
 
   // Captura os dados dos campos do formulário
-  const rec_descricao = document.getElementById("select_extra").value.trim();
-  const rec_data_receber = document.getElementById("").value.trim();
   const rec_valor = document.getElementById("value_fixa").value.trim();
+  const rec_data_recebimento = document.getElementById("recebimento_fixa").value.trim();
+  const rec_descricao = document.getElementById("select_fixa").value.trim();
 
   // Valida se todos os campos foram preenchidos
-  if (!rec_descricao || !rec_data_receber || !rec_valor ) {
+  if (!rec_valor || !rec_data_recebimento|| !rec_descricao) {
       alert("Por favor, preencha todos os campos.");
       return;
   }
 
   // Cria o payload para enviar à API
-  const usuario = {
-    rec_descricao,
-    rec_data_receber,
-    rec_valor,
+  const receitas = {
+      rec_valor,
+      rec_data_recebimento,
+      rec_descricao,
   };
 
   try {
@@ -463,17 +431,15 @@ document.getElementById("submit").addEventListener("click", async (event) => {
           headers: {
               "Content-Type": "application/json",
           },
-          body: JSON.stringify(usuario),
+          body: JSON.stringify(receitas),
       });
 
       // Verifica a resposta da API
       if (response.ok) {
           const data = await response.json();
 
-
-          
           Toastify({
-            text: "Cadastro realizado com sucesso!",
+            text: "Receita realizado com sucesso!",
             duration: 800,
             close: false,
             gravity: "top", // `top` or `bottom`
@@ -484,16 +450,14 @@ document.getElementById("submit").addEventListener("click", async (event) => {
             },
           }).showToast();
 
-
-          console.log("Usuário cadastrado:", data);
+          console.log("Receita cadastrada:", data);
           // Limpa o formulário após o cadastro bem-sucedido
-          document.getElementById("select_extra").value = "";
-          document.getElementById("").value = "";
           document.getElementById("value_fixa").value = "";
-
+          document.getElementById("recebimento_fixa").value = "";
+          document.getElementById("select_fixa").value = "";
       } else {
           const errorData = await response.json();
-          alert(`Erro ao cadastrar: ${errorData.message || "Erro desconhecido"}`);
+          alert(`Erro ao cadastrar receita: ${errorData.message || "Erro desconhecido"}`);
       }
   } catch (error) {
       console.error("Erro ao realizar a requisição:", error);
@@ -501,5 +465,30 @@ document.getElementById("submit").addEventListener("click", async (event) => {
   }
 });
 
+// async function listarReceitas() {
+//   try {
+//     // Busca as receitas da API local
+//     const response = await fetch('http://localhost:333/receitas');
+//     if (!response.ok) {
+//       throw new Error('Erro ao buscar receitas!');
+//     }
 
->>>>>>> aafffbdf2218b0dc46a6071b63ea13dc5ab0a259
+//     const receitas = await response.json();
+
+//     // Atualiza a lista de receitas
+//     const lista = document.getElementById('lista_receitas');
+//     lista.innerHTML = ''; // Limpa a lista anterior
+//     receitas.forEach((receita) => {
+//       const item = document.createElement('li');
+//       item.textContent = `R$ ${receita.valor.toFixed(2)} - ${receita.data} - ${receita.descricao}`;
+//       lista.appendChild(item);
+//     });
+//   } catch (error) {
+//     console.error(error);
+//     alert('Não foi possível listar as receitas.');
+//   }
+// }
+
+// // Inicializa a lista de receitas ao carregar a página
+// listarReceitas();
+

@@ -38,8 +38,6 @@ document.getElementById("submit").addEventListener("click", async (event) => {
       if (response.ok) {
           const data = await response.json();
 
-
-
           Toastify({
             text: "Cadastro realizado com sucesso!",
             duration: 800,
