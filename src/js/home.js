@@ -271,8 +271,12 @@ closeperfilOpt.addEventListener("click", () => {
 
 // Listar informações no perfil
 
-function addDespesas(e) {
-  e.preventDefault();
+let despesa = []
+
+document.querySelector('.input-area-desp').addEventListener('submit', addDespesas);
+
+function addDespesas(event) {
+  event.preventDefault();
 
   // alterar datas
 
@@ -401,5 +405,12 @@ function editarDespesa(id) {
   apagarDespesa(id)
 }
 
-// Receitas
+// Foto perfil
+
+const userAvatar = document.getElementById('user_avatar');
+const newPhoto = document.getElementById('file');
+
+newPhoto.addEventListener('change', () => {
+  userAvatar.src = URL.createObjectURL(newPhoto.files[0])
+})
 
