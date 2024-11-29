@@ -277,15 +277,14 @@
                 <label>Valor</label>
                 <input type="number" id="value_fixa" placeholder="R$ 0.00" required>
               </div>
-              <div class="inputs">
-                <label>Data de recebimento</label>
-                <input type="date" id="recebimento_fixa" required>
-              </div>
+              
               <div class="inputs">
                 <label>Descrição</label>
                 <select id="select_fixa" required>
-                  <option value="Fixa">Fixa</option>
-                  <option value="Fixa">Extra</option>
+                  <option value="year">Anual</option>
+                  <option value="mouth">Mensal</option>
+                  <option value="week">Semanal</option>
+                  <option value="day">Diário</option>
                 </select>
               </div>
               <button id="add_receitas">Adicionar</button>
@@ -299,10 +298,7 @@
                 <label>Valor</label>
                 <input type="number" id="value_extra" placeholder="R$ 0.00" required>
               </div>
-              <div class="inputs">
-                <label>Data de recebimento</label>
-                <input type="date" id="recebimento_extra" required>
-              </div>
+              
               <div class="inputs">
                 <label>Descrição</label>
                 <select id="select_extra" required>
